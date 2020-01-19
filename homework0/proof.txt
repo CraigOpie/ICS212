@@ -1,0 +1,7 @@
+Script started on Tue 14 Jan 2020 07:20:23 PM HST
+]0;opieca@uhx02:~/homework0[?1034huhx02:/home/o/opieca/homework0% gcc -ansi -pedantic-errors -Wall -c homework0.c
+]0;opieca@uhx02:~/homework0uhx02:/home/o/opieca/homework0% gcc -o homework0 homework0.o
+]0;opieca@uhx02:~/homework0uhx02:/home/o/opieca/homework0% exit
+exit
+
+Script done on Tue 14 Jan 2020 07:21:03 PM HST

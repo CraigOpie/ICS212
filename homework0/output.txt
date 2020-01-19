@@ -1,0 +1,9 @@
+Script started on Tue 14 Jan 2020 07:21:16 PM HST
+]0;opieca@uhx02:~/homework0[?1034huhx02:/home/o/opieca/homework0% ./homework0 
+\Name:	<Craig Opie>\
+\Hello World\
+\ICS212 Program Structure\
+]0;opieca@uhx02:~/homework0uhx02:/home/o/opieca/homework0% exit
+exit
+
+Script done on Tue 14 Jan 2020 07:21:24 PM HST
