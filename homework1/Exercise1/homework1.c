@@ -45,7 +45,7 @@ int exponent(int, int);
 //
 ******************************************************************************/
 
-int main()
+int main(int argc, char *argv[])
 {
     int user_int;
 
