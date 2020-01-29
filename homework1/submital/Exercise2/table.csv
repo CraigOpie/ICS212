@@ -1,0 +1,17 @@
+Address,Name,Datatype,Scope,Value\n
+0x7ffc8376b1dc,argc,int,main,1\n
+0x7ffc8376b2e8,argv,char*,main,0x7ffc8376b624\n
+0x7ffc8376b1fc,num1,int,main,5\n
+0x7ffc8376b1f8,num2,int,main,5\n
+0x7ffc8376b1f7,c,char,main,A\n
+0x7ffc8376b1f0,score1,float,main,25.5\n
+0x7ffc8376b1e0,ca[0],char[],main,H\n
+0x7ffc8376b1e1,ca[1],char[],main,i\n
+0x7ffc8376b1e2,ca[2],char[],main,null\n
+0x7ffc8376b1bc,x,int,dummy,5\n
+0x7ffc8376b1b8,y,char,dummy,A\n
+0x7ffc8376b1b0,z,char*,dummy,0x7ffc8376b1e0\n
+0x7ffc8376b1ac,w,float,dummy,25.5\n
+0x7ffc8376b1bc,x,int,dummy,6\n
+0x7ffc8376b1b8,y,char,dummy,B\n
+0x7ffc8376b1ac,w,float,dummy,30.6

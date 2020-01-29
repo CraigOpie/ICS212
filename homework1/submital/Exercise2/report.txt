@@ -1,0 +1,13 @@
+The actual memory allocations are different from what we practiced by hand in class by a few ways: 
+First, the address begins with 0x to represent that it is a hex value.
+Second, the value is a hex value where in class we used decimal values.
+Third, the value is massive compared to what we practiced in class.
+Fourth, in class the addresses were reserved in sequence as the demand was created.  In actuality, the 
+CPU reserves the lowest available address location.  As the computer operates, lower addresses become 
+available and the CPU reserves those addresses during the execution of our program.  As a result,
+we get addresses that are not always in numerical order.  
+Finally, in class we assumed that all variables reserved four bytes of memory. In actuality, this varied
+based on each type being used.  In fact, we can see that each char of the char array uses just one byte
+each.  This is due to each byte representing the ASCII value stored in that location.  Int values were 
+reserving four bytes, and floats were reserving eight bytes.  Char arrays were reserving the number of 
+bytes specified when the array was initiated.  
