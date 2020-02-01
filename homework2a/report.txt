@@ -1,0 +1,29 @@
+The make utility is a command generator that executes a sequence of 
+commands by the UNIX shell.  Software engineers use make to help 
+maintain source code and linkage files in a software development 
+project; moreover, make is used to organize the dependency relations 
+among source files, object files, and executables to determine the 
+correct way to build files needed by the project.  This is extremely 
+helpful in large development environments that contain a large amount 
+of dependency files, require complex build processes, or involves 
+multiple files that were changed simultaneously such that file changes 
+must be tracked to properly build.
+
+Some of the benefits of using the make utility involves being able to 
+efficiently and effectively build projects repeatedly during testing 
+and debugging source code.  This process can save a developer many hours 
+over the course of days, weeks, or months.  Using the make utility also 
+ensures consistency during building to ensure all developers and using 
+the same compilation flags, filenames, and variables.
+
+My personal experience working with the make utility has led me to envision 
+the make utility as a pyramid application that starts at the base and works 
+up to the top.  When running the make utility, it checks to see what files 
+have been changed or touched since the previous use.  Then it determines 
+the minimum amount of commands to execute by looking at what targets in the 
+make file are affected by the changed dependencies.  If source code has not 
+changed since the last build, but object files have, then the make utility 
+will execute the commands specified for the target having the object files 
+as a dependency and then each target file affected by the new build 
+dependencies.
+
