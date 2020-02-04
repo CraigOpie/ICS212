@@ -39,8 +39,6 @@ void halfstring(const char *oldString, char *newString)
 {
     int i;
     int j = 0;
-    printf("This function takes an input char[] and stores every other char ");
-    printf("into a second char[] using pointers.");
     for (i = 0; i < 15; i++)
     {
         if (oldString[i] == '\0')

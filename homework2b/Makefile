@@ -1,6 +1,6 @@
-homework2b: homework2b.o
+homework2b: driver.o halfstring.o mystring.o
 		gcc -o homework2b *.o
-homework2b.o: driver.c halfstring.c halfstring.h
+driver.o halfstring.o mystring.o: driver.c halfstring.c mystring.c halfstring.h mystring.h
 		gcc -ansi -pedantic-errors -Wall -c *.c
 clean:
 		rm -f *.o homework2b

@@ -1,0 +1,14 @@
+Script started on Tue 04 Feb 2020 02:41:52 AM HST
+]0;opieca@uhx02:~/ICS212/homework2b[?1034huhx02:/home/o/opieca/ICS212/homework2b% ./homework2b 
+This function takes an input char[] and stores every other 
+character into a second char[] using pointers.
+Input:  This is first
+Result: Ti sfrt
+Input:  Second
+Result: Scn
+Input:  3rd string
+Result: 3dsrn
+]0;opieca@uhx02:~/ICS212/homework2buhx02:/home/o/opieca/ICS212/homework2b% exit
+exit
+
+Script done on Tue 04 Feb 2020 02:42:01 AM HST

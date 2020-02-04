@@ -53,6 +53,9 @@ int main(int argc, char* argv[])
     '\0' };
     const int maxSize = 15;
 
+    printf("This function takes an input char[] and stores every other \n");
+    printf("character into a second char[] using pointers.\n");
+    
     halfstring(firstString, newString);
     printf("Input:  ");
     printConstArray(firstString, maxSize);

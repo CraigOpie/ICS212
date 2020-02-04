@@ -1,0 +1,8 @@
+Script started on Tue 04 Feb 2020 02:41:30 AM HST
+]0;opieca@uhx02:~/ICS212/homework2b[?1034huhx02:/home/o/opieca/ICS212/homework2b% make
+gcc -ansi -pedantic-errors -Wall -c *.c
+gcc -o homework2b *.o
+]0;opieca@uhx02:~/ICS212/homework2buhx02:/home/o/opieca/ICS212/homework2b% exit
+exit
+
+Script done on Tue 04 Feb 2020 02:41:36 AM HST
