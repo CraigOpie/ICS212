@@ -48,8 +48,11 @@ int userDeleteRecord(struct record ** dataBase);
 /* Collects valid integers from the user */
 int getIntFromUser();
 
+/* Collects string from the user without special chars */
+void getName(char * text, int size);
+
 /* Collects string from the user with \n chars */
-void getStringFromUser(char * text, int size);
+void getAddress(char * text, int size);
 
 /* Exponent calculation function */
 int exponent(int base, int exp);

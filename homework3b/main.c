@@ -22,7 +22,7 @@
 #include "database.h"
 #include "record.h"
 
-int debugMode = 0;
+int debugMode = 1;
 void manFile();
 
 /******************************************************************************
@@ -48,9 +48,9 @@ int main(int argc, char* argv[])
     }
     if (argc == 1 || (argc == 2 && debugMode == 0))
     {
+        introMessage();
         while(loop == 0)
         {
-            introMessage();
             loop = menu(start);
         }
     }
@@ -63,8 +63,24 @@ int main(int argc, char* argv[])
     return 0;
 }
 
+/******************************************************************************
+//
+//  FUNCTION NAME: manFile
+//
+//  DESCRIPTION:   manFile function informs the user about using arguments
+//
+//  PARAMETERS:    None.
+//
+//  RETURN VALUES: None.
+//
+******************************************************************************/
+
 void manFile()
 {
+    if (debugMode == 0)
+    {
+        printf("FUNCTION NAME: manFile\n\n");
+    }
     printf("NAME\n\thomework3b - bank database application\n\n");
     printf("SYNOPSIS\n\thomework3b [debug]\n\n");
     printf("DESCRIPTION\n\thomework3b allows a banker to create, modify, view");

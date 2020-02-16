@@ -36,6 +36,13 @@
 
 int addRecord(struct record ** entry, int accNum, char * name, char * address)
 {
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: addRecord\n");
+        printf("Account Number: %d\n", accNum);
+        printf("Name: %s\n", name);
+        printf("Address: %s\n", address);
+    }
     printf("STUB - You added a record.\n");
 
     return 0;
@@ -56,6 +63,11 @@ int addRecord(struct record ** entry, int accNum, char * name, char * address)
 
 int printRecord(struct record * recordSet, int accNum)
 {
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: printRecord\n");
+        printf("Account Number: %d\n", accNum);
+    }
     printf("\nSTUB - You printed a record.\n");
 
     return 0;
@@ -75,6 +87,10 @@ int printRecord(struct record * recordSet, int accNum)
 
 void printAllRecords(struct record * recordSet)
 {
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: printAllRecords\n");
+    }
     printf("STUB - You printed all records.\n");
 }
 
@@ -94,6 +110,12 @@ void printAllRecords(struct record * recordSet)
 
 int modifyRecord(struct record * recordSet, int accNum, char * address)
 {
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: modifyRecord\n");
+        printf("Account Number: %d\n", accNum);
+        printf("Address: %s\n", address);
+    }
     printf("STUB - You modified the address.\n");
 
     return 0;
@@ -114,6 +136,11 @@ int modifyRecord(struct record * recordSet, int accNum, char * address)
 
 int deleteRecord(struct record ** entry, int accNum)
 {
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: deleteRecord\n");
+        printf("Account Number: %d\n", accNum);
+    }
     printf("\nSTUB - You deleted a record.\n");
 
     return 0;

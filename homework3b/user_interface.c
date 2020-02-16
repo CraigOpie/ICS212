@@ -19,6 +19,7 @@
 
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
 #include "user_interface.h"
 
 /******************************************************************************
@@ -36,21 +37,44 @@
 
 void introMessage()
 {
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: introMessage\n");
+    }
     printf("\n");
     printf("================================================================");
     printf("================\n\n");
     printf("Welcome to the 'School of Hard Knocks' Student Banking and ");
     printf("Transaction System\n");
     printf("================================================================");
-    printf("================\n\n");
+    printf("================\n");
 }
+
+/******************************************************************************
+//
+//  FUNCTION NAME: menu
+//
+//  DESCRIPTION:   Provides the user with an interface menu to navigate the
+//                 program and its features.
+//
+//  PARAMETERS:    dataBase : Pointer to the record database.
+//
+//  RETURN VALUES: 0 : Continue Loop
+//                 1 : Exit Loop
+//
+******************************************************************************/
 
 int menu(struct record * dataBase)
 {
     char user_input[3];
     int option;
 
-    printf("Please choose a menu option by typing the corresponding number ");
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: menu\n");
+    }
+
+    printf("\nPlease choose a menu option by typing the corresponding number ");
     printf("and pressing enter.\n");
     printf("1: Add a new record.\n");
     printf("2: Print a record.\n");
@@ -75,9 +99,31 @@ int menu(struct record * dataBase)
     return callMenuItem(dataBase, option);
 }
 
+/******************************************************************************
+//
+//  FUNCTION NAME: callMenuItem
+//
+//  DESCRIPTION:   Uses a switch statement to direct which functions to call
+//                 based on the users menu item selection.
+//
+//  PARAMETERS:    dataBase : Pointer to the record database.
+//                 choice   : Indicates the menu item selected by the user.
+//
+//  RETURN VALUES: 0 : Success.
+//                 1 : Failure or user quits.
+//
+******************************************************************************/
+
 int callMenuItem(struct record * dataBase, int choice)
 {
     int result = 0;
+
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: callMenuItem\n");
+        printf("choice: %d\n", choice);
+    }
+    
     switch(choice)
     {
         case 1: result = userAddRecord(&dataBase);
@@ -98,26 +144,63 @@ int callMenuItem(struct record * dataBase, int choice)
     return result;
 }
 
+/******************************************************************************
+//
+//  FUNCTION NAME: userAddRecord
+//
+//  DESCRIPTION:   Obtains the account number, name, and address of the new
+//                 user and creates the record in the database.
+//
+//  PARAMETERS:    dataBase : Address of a pointer to the new record in the 
+//                            database.
+//
+//  RETURN VALUES: 0 : Success.
+//
+******************************************************************************/
+
 int userAddRecord(struct record ** dataBase)
 {
     int accNum = 0;
     char name[25];
     char address[80];
 
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: userAddRecord\n");
+    }
+
     printf("Please enter the account number:\n");
     accNum = getIntFromUser();
     printf("\nPlease enter name (press Enter twice to exit):\n");
-    getStringFromUser(name, 25);
+    getName(name, 25);
     printf("Please enter the address (press Enter twice to exit):\n");
-    getStringFromUser(address, 80);
+    getAddress(address, 80);
     addRecord(dataBase, accNum, name, address);
 
     return 0;
 }
 
+/******************************************************************************
+//
+//  FUNCTION NAME: userPrintRecord
+//
+//  DESCRIPTION:   Obtains the account number from the user and prints the
+//                 record information.
+//
+//  PARAMETERS:    dataBase : Pointer to the record location.
+//
+//  RETURN VALUES: 0 : Success.
+//
+******************************************************************************/
+
 int userPrintRecord(struct record * dataBase)
 {
     int accNum = 0;
+    
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: userPrintRecord\n");
+    }
     
     printf("Please enter the account number:\n");
     accNum = getIntFromUser();
@@ -126,23 +209,59 @@ int userPrintRecord(struct record * dataBase)
     return 0;
 }
 
+/******************************************************************************
+//
+//  FUNCTION NAME: userModifyRecord
+//
+//  DESCRIPTION:   Obtains the account number and new address from the user
+//                 and updates the record in the database.
+//
+//  PARAMETERS:    dataBase : Pointer to the record location.
+//
+//  RETURN VALUES: 0 : Success.
+//
+******************************************************************************/
+
 int userModifyRecord(struct record * dataBase)
 {
     int accNum = 0;
     char address[80];
 
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: userModifyRecord\n");
+    }
+
     printf("Please enter the account number:\n");
     accNum = getIntFromUser();
     printf("\nPlease enter the address (press Enter twice to exit):\n");
-    getStringFromUser(address, 80);
+    getAddress(address, 80);
     modifyRecord(dataBase, accNum, address);
 
     return 0;
 }
 
+/******************************************************************************
+//
+//  FUNCTION NAME: userDeleteRecord
+//
+//  DESCRIPTION:   Obtains the account number from the user and deletes the
+//                 associated record from the database.
+//
+//  PARAMETERS:    dataBase : Address of a Pointer to the record location.
+//
+//  RETURN VALUES: 0 : Success.
+//
+******************************************************************************/
+
 int userDeleteRecord(struct record ** dataBase)
 {
     int accNum = 0;
+    
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: userDeleteRecord\n");
+    }
     
     printf("Please enter the account number:\n");
     accNum = getIntFromUser();
@@ -150,6 +269,20 @@ int userDeleteRecord(struct record ** dataBase)
 
     return 0;
 }
+
+/******************************************************************************
+//
+//  FUNCTION NAME: getIntFromUser
+//
+//  DESCRIPTION:   Takes a string input and performs checks to ensure it is an
+//                 integer value, then convers the useable string values to an
+//                 integer.  The value is returned for use.
+//
+//  PARAMETERS:    None.
+//
+//  RETURN VALUES: int : Value inputed from the user.
+//
+******************************************************************************/
 
 int getIntFromUser()
 {
@@ -159,6 +292,12 @@ int getIntFromUser()
     int bad_input = 1;
     int digits;
     int valid_int;
+    
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: getIntFromUser\n");
+    }
+    
     do
     {
         fgets(user_input, 25, stdin);
@@ -192,13 +331,95 @@ int getIntFromUser()
         }
     }
     while(bad_input == 1);
+    valid_int = (int)((valid_int - 3) / 10);
 
     return(valid_int);
 }
 
-void getStringFromUser(char * text, int size)
+/******************************************************************************
+//
+//  FUNCTION NAME: getName
+//
+//  DESCRIPTION:   Function that gets input from the user and stores the value
+//                 in an array who's address was passed into the function.
+//                 The array does not allow special chars besides a space.
+//
+//  PARAMETERS:    text : Pointer to the location where the address will be
+//                        stored.
+//                 size : Integer specifying the size of the array.
+//
+//  RETURN VALUES: None.
+//
+******************************************************************************/
+
+void getName(char * text, int size)
+{
+    int i = 0;
+    char currentChar = '\0';
+    char lastChar = '\0';
+    
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: getName\n");
+        printf("size: %d\n", size);
+    }
+
+    while (i < size)
+    {
+        currentChar = fgetc(stdin);
+        if (currentChar == '\n')
+        {
+            if (lastChar == '\n')
+            {
+                i = size;
+            }
+            else
+            {
+               lastChar = '\n';
+            }
+        }
+        else
+        {
+            lastChar = '\0';
+        }
+
+        if (((int)currentChar == 32) ||
+        (((int)currentChar > 64) && ((int)currentChar < 91)) ||
+        (((int)currentChar > 96) && ((int)currentChar < 123)))
+        {
+            text[i] = currentChar;
+            i++;
+        }
+    }
+    text[size-1] = '\0';
+}
+
+/******************************************************************************
+//
+//  FUNCTION NAME: getAddress
+//
+//  DESCRIPTION:   Function that gets input from the user and stores the value
+//                 in an array who's address was passed into the function.
+//                 The array allows all special chars and return lines.
+//
+//  PARAMETERS:    text : Pointer to the location where the address will be
+//                        stored.
+//                 size : Integer specifying the size of the array.
+//
+//  RETURN VALUES: None.
+//
+******************************************************************************/
+
+void getAddress(char * text, int size)
 {
     int i;
+    
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: getAddress\n");
+        printf("text: %s\n", text);
+        printf("size: %d\n", size);
+    }
 
     for (i = 0; i < size; i++)
     {
@@ -214,10 +435,31 @@ void getStringFromUser(char * text, int size)
     }
 }
 
+/******************************************************************************
+//
+//  FUNCTION NAME: exponent
+//
+//  DESCRIPTION:   exponent function returns the int of the base raised to the
+//                 exp specified by the call.
+//
+//  PARAMETERS:    base : The radix of the number system
+//                 exp  : The distance from the radix point
+//
+//  RETURN VALUES: int  : The result of the math.
+//
+******************************************************************************/
+
 int exponent(int base, int exp)
 {
     int i;
-    int number = 1;
+    int number =1;
+    
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: exponent\n");
+        printf("base: %d\n", base);
+        printf("exp: %d\n", exp);
+    }
 
     for (i = 0; i < exp; ++i)
     {
