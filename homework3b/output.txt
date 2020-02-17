@@ -1,0 +1,427 @@
+Script started on Sun 16 Feb 2020 10:59:44 PM HST
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+-1
+That value was not a valid integer. Please try again.
+123
+
+Please enter name (press Enter twice to exit):
+Craig Opie
+
+Please enter the address (press Enter twice to exit):
+Address
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 2
+Please enter the account number:
+123
+
+STUB - You printed a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 3
+STUB - You printed all records.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 4
+Please enter the account number:
+123
+
+Please enter the address (press Enter twice to exit):
+1680 Exa  ast-West Road
+Honolulu, Hi I 96822
+
+STUB - You modified the address.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 5
+Please enter the account number:
+123
+
+STUB - You deleted a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 6
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b test
+ERROR: improper use of arguments
+NAME
+	homework3b - bank database application
+
+SYNOPSIS
+	homework3b [debug]
+
+DESCRIPTION
+	homework3b allows a banker to create, modify, view
+	and delete information about clients.
+
+OPTIONS
+	debug
+		Enters debug mode and provides amplifying
+		information about each function that is operating.
+
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b test[K[K[K[Kdebug test
+ERROR: improper use of arguments
+NAME
+	homework3b - bank database application
+
+SYNOPSIS
+	homework3b [debug]
+
+DESCRIPTION
+	homework3b allows a banker to create, modify, view
+	and delete information about clients.
+
+OPTIONS
+	debug
+		Enters debug mode and provides amplifying
+		information about each function that is operating.
+
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+Opie, Craig A.%
+
+Please enter the address (press Enter twice to exit):
+
+
+FUNCTION NAME: getAddress
+text: 
+size: 80
+1680-  East-West Road
+Honolulu, HI 96813  22
+
+
+
+FUNCTION NAME: addRecord
+Account Number: 12345
+Name: Opie Craig A
+Address: 1680 East-West Road
+Honolulu, HI 96822
+STUB - You added a record.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 2
+
+
+FUNCTION NAME: callMenuItem
+choice: 2
+
+
+FUNCTION NAME: userPrintRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+
+
+FUNCTION NAME: printRecord
+Account Number: 12345
+
+STUB - You printed a record.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 3
+
+
+FUNCTION NAME: callMenuItem
+choice: 3
+
+
+FUNCTION NAME: printAllRecords
+STUB - You printed all records.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 4
+
+
+FUNCTION NAME: callMenuItem
+choice: 4
+
+
+FUNCTION NAME: userModifyRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+
+Please enter the address (press Enter twice to exit):
+
+
+FUNCTION NAME: getAddress
+text: @
+size: 80
+POST 518
+1680 East-West Road
+Honolulu, HI 96822
+
+
+
+FUNCTION NAME: modifyRecord
+Account Number: 12345
+Address: POST 518
+1680 East-West Road
+Honolulu, HI 96822
+STUB - You modified the address.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 5
+
+
+FUNCTION NAME: callMenuItem
+choice: 5
+
+
+FUNCTION NAME: userDeleteRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+
+
+FUNCTION NAME: deleteRecord
+Account Number: 12345
+
+STUB - You deleted a record.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 6
+
+
+FUNCTION NAME: callMenuItem
+choice: 6
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% exit
+exit
+
+Script done on Sun 16 Feb 2020 11:03:32 PM HST

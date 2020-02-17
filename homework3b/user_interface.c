@@ -288,7 +288,7 @@ int getIntFromUser()
 {
     char user_input[25];
     int i;
-    int size_user_input;
+    int size_user_input = 0;
     int bad_input = 1;
     int digits;
     int valid_int;
@@ -301,10 +301,28 @@ int getIntFromUser()
     do
     {
         fgets(user_input, 25, stdin);
-        size_user_input = (sizeof(user_input) / sizeof(user_input[0]));
+        for (i = 0; i < 25; i++)
+        {
+            if (((int)user_input[i] > 47) && ((int)user_input[i] < 58))
+            {
+                user_input[size_user_input] = user_input[i];
+                size_user_input++;
+            }
+        }
+        for (i = (size_user_input - 1); i < 25; i++)
+        {
+            user_input[i] = '\0';
+        }
+        for (i = 0; i < 25; i++)
+        {
+            if ((int)user_input[i] == 3)
+            {
+                user_input[i] = '\0';
+            }
+        }
         digits = 0;
         valid_int = 0;
-        for (i = (size_user_input -1); i >= 0; i--)
+        for (i = (size_user_input - 1); i >= 0; i--)
         {
             if (((int)user_input[i] > 47) && ((int)user_input[i] < 58))
             {
@@ -328,10 +346,13 @@ int getIntFromUser()
         {
             printf("That value was not a valid integer. ");
             printf("Please try again.\n");
+            for (i = 0; i < 25; i++)
+            {
+                user_input[i] = '\0';
+            }
         }
     }
     while(bad_input == 1);
-    valid_int = (int)((valid_int - 3) / 10);
 
     return(valid_int);
 }

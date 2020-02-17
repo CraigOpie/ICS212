@@ -1,0 +1,1856 @@
+Script started on Sun 16 Feb 2020 09:57:27 PM HST
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+123
+
+Please enter name (press Enter twice to exit):
+Craig, Opie. A. $
+
+Please enter the address (press Enter twice to exit):
+1680 East-West Road
+POST 518
+Honolulu, HI 96822
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+-12
+That value was not a valid integer. Please try again.
+1
+That value was not a valid integer. Please try again.
+1
+That value was not a valid integer. Please try again.
+111
+
+Please enter name (press Enter twice to exit):
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+-12
+That value was not a valid integer. Please try again.
+1
+That value was not a valid integer. Please try again.
+2
+That value was not a valid integer. Please try again.
+3
+That value was not a valid integer. Please try again.
+4
+That value was not a valid integer. Please try again.
+5
+That value was not a valid integer. Please try again.
+6
+That value was not a valid integer. Please try again.
+7
+That value was not a valid integer. Please try again.
+8
+That value was not a valid integer. Please try again.
+9
+That value was not a valid integer. Please try again.
+0
+That value was not a valid integer. Please try again.
+10
+That value was not a valid integer. Please try again.
+111
+
+Please enter name (press Enter twice to exit):
+
+
+Please enter the address (press Enter twice to exit):
+
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 6
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+1
+That value was not a valid integer. Please try again.
+50
+
+Please enter name (press Enter twice to exit):
+48
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+46
+
+Please enter name (press Enter twice to exit):
+
+
+Please enter the address (press Enter twice to exit):
+
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+44
+
+Please enter name (press Enter twice to exit):
+
+
+Please enter the address (press Enter twice to exit):
+
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+2
+
+Please enter name (press Enter twice to exit):
+
+
+Please enter the address (press Enter twice to exit):
+
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+1
+
+Please enter name (press Enter twice to exit):
+
+
+Please enter the address (press Enter twice to exit):
+
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+1
+That value was not a valid integer. Please try again.
+1
+That value was not a valid integer. Please try again.
+
+That value was not a valid integer. Please try again.
+1
+That value was not a valid integer. Please try again.
+2
+That value was not a valid integer. Please try again.
+3
+That value was not a valid integer. Please try again.
+4
+That value was not a valid integer. Please try again.
+5
+That value was not a valid integer. Please try again.
+7
+That value was not a valid integer. Please try again.
+11
+That value was not a valid integer. Please try again.
+48
+
+Please enter name (press Enter twice to exit):
+
+
+Please enter the address (press Enter twice to exit):
+
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+44
+
+Please enter name (press Enter twice to exit):
+
+
+Please enter the address (press Enter twice to exit):
+
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+10
+That value was not a valid integer. Please try again.
+20
+
+Please enter name (press Enter twice to exit):
+
+
+Please enter the address (press Enter twice to exit):
+
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+15
+That value was not a valid integer. Please try again.
+16
+That value was not a valid integer. Please try again.
+17
+That value was not a valid integer. Please try again.
+18
+That value was not a valid integer. Please try again.
+19
+That value was not a valid integer. Please try again.
+20
+
+Please enter name (press Enter twice to exit):
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+0That value was not a valid integer. Please try again.
+1
+0That value was not a valid integer. Please try again.
+11
+0That value was not a valid integer. Please try again.
+^[[A^[[B        ^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+0That value was not a valid integer. Please try again.
+10
+0That value was not a valid integer. Please try again.
+^[[B^[[B^[[B^[[B^[[A^[[A^[[A^[[A                                ^[[B^[[B^[[B^[[B^[[B^[[A                        ^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make clean
+rm -f *.o homework3b proof.txt output.txt
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% makr[Ke ready
+touch main.c user_interface.c database.c
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% mak[K[K[Kscript proof.txt
+Script started, file is proof.txt
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c main.c
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -ansi -pedantic-errors -Wall -c database.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% exit
+exit
+Script done, file is proof.txt
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% script output.txt
+Script started, file is output.txt
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+o 0
+0That value was not a valid integer. Please try again.
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make clean
+rm -f *.o homework3b proof.txt output.txt
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make ready
+touch main.c user_interface.c database.c
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% a[Kscript proof.txt
+Script started, file is proof.txt
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c main.c
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -ansi -pedantic-errors -Wall -c database.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% exit
+exit
+Script done, file is proof.txt
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% script output.txt
+Script started, file is output.txt
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+123
+
+Please enter name (press Enter twice to exit):
+opiec     Opie, Craig A.$
+
+Please enter the address (press Enter twice to exit):
+725   1680 Eac st-West Road
+Honolulu, HI 96822
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 6
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% rm output.txt 
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% exit
+exit
+Script done, file is output.txt
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% rm output.txt
+rm: cannot remove ‚Äòoutput.txt‚Äô: No such file or directory
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ls
+database.c  database.o  main.c  Makefile   record.h          user_interface.h
+database.h  [0m[38;5;34mhomework3b[0m  main.o  proof.txt  user_interface.c  user_interface.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% script output.txt
+Script started, file is output.txt
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+-1
+That value was not a valid integer. Please try again.
+12345
+
+Please enter name (press Enter twice to exit):
+Craig Opie
+
+Please enter the address (press Enter twice to exit):
+1680-Eas     East  -e West Roda  ad
+Honolulu, HI 96813  22
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 2
+Please enter the account number:
+12345
+
+STUB - You printed a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 3
+STUB - You printed all records.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 4
+Please enter the account number:
+12345
+
+Please enter the address (press Enter twice to exit):
+1680    POST 518
+1680 Esas   ast-West Road
+Honolulu, HI 96822
+
+STUB - You modified the address.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 5
+Please enter the account number:
+12345
+
+STUB - You deleted a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 6
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b test
+ERROR: improper use of arguments
+NAME
+	homework3b - bank database application
+
+SYNOPSIS
+	homework3b [debug]
+
+DESCRIPTION
+	homework3b allows a banker to create, modify, view
+	and delete information about clients.
+
+OPTIONS
+	debug
+		Enters debug mode and provides amplifying
+		information about each function that is operating.
+
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debug test
+ERROR: improper use of arguments
+NAME
+	homework3b - bank database application
+
+SYNOPSIS
+	homework3b [debug]
+
+DESCRIPTION
+	homework3b allows a banker to create, modify, view
+	and delete information about clients.
+
+OPTIONS
+	debug
+		Enters debug mode and provides amplifying
+		information about each function that is operating.
+
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./de[K[Khomework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 5
+
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+Cra$ig      Opie, Cra%ig A.$
+
+Please enter the address (press Enter twice to exit):
+
+
+FUNCTION NAME: getAddress
+text: 
+size: 80
+1680    POST518    518
+H 1680 East-West Road
+Honolulu, HI 96822
+
+
+
+FUNCTION NAME: addRecord
+Account Number: 10202
+Name: Opie Craig A
+Address: POST 518
+1680 East-West Road
+Honolulu, HI 96822
+STUB - You added a record.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 6
+
+
+FUNCTION NAME: callMenuItem
+choice: 6
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 5
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 6
+
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+
+
+Please enter the address (press Enter twice to exit):
+
+
+FUNCTION NAME: getAddress
+text: 
+size: 80
+
+
+
+
+FUNCTION NAME: addRecord
+Account Number: 1234532
+Name: 
+Address: 
+STUB - You added a record.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 6
+
+
+FUNCTION NAME: callMenuItem
+choice: 6
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+ 00 00 001270ê-1120ˇ-10+43030Ä-1280 00 001270ê-1120˛-20ı-110»-560
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+3513 03 03
+103
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+55353
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+452453
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+3513453
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+25023453
+
+FUNCTION NAME: exponent
+base: 10
+exp: 5
+149123453
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+25 00 00 001270î-1080,440 320ì-1090Ä-1280 00 001270î-1080+430Î-210X880
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+3513 03 03
+103
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+55353
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+452453
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+3513453
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+25023453
+
+FUNCTION NAME: exponent
+base: 10
+exp: 5
+149123453
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+25
+ 
+0
+0
+ 
+0
+0
+ 
+0
+0
+
+127
+0
+Q
+81
+0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+4
+52
+4
+p
+112
+4
+ì
+-109
+4
+Ä
+-128
+4
+ 
+0
+4
+ 
+0
+4
+
+127
+4
+Q
+81
+4
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+4
+52
+44
+;
+59
+44
+X
+88
+44
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+3
+51
+344
+ 
+0
+344
+ 
+0
+344
+
+
+10
+344
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+5
+53
+5344
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+4
+52
+45344
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 5
+3
+51
+345344
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 6
+2
+50
+2345344
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 7
+1
+49
+12345344
+
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+123453
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+3
+51
+3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+5
+53
+53
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+4
+52
+453
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+3
+51
+3453
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+2
+50
+23453
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 5
+1
+49
+123453
+
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debugmake[K
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make./homework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+123453
+ 
+0
+0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+3
+51
+3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+5
+53
+53
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+4
+52
+453
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+3
+51
+3453
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+2
+50
+23453
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 5
+1
+49
+123453
+
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+12345
+ 
+0
+0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+5
+53
+5
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+4
+52
+45
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+3
+51
+345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+2
+50
+2345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+1
+49
+12345
+
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make clean
+rm -f *.o homework3b proof.txt output.txt
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make ready
+touch main.c user_interface.c database.c
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% script proof.txt
+Script started, file is proof.txt
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c main.c
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -ansi -pedantic-errors -Wall -c database.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% exit
+exit
+Script done, file is proof.txt
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% script p[Koutput.txt
+Script started, file is output.txt
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+12345
+1234531
+ 
+0
+0
+1
+49
+1
+3
+51
+31
+5
+53
+531
+4
+52
+4531
+3
+51
+34531
+2
+50
+234531
+1
+49
+1234531
+
+Please enter name (press Enter twice to exit):
+^C
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make clean
+rm -f *.o homework3b proof.txt output.txt
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make ready
+touch main.c user_interface.c database.c
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% make[K[K[K[Kscript proof.txt
+Script started, file is proof.txt
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c main.c
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -ansi -pedantic-errors -Wall -c database.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% exit
+exit
+Script done, file is proof.txt
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% script p[Koutput.txt
+Script started, file is output.txt
+]0;opieca@uhx02:~/ICS212/homework3b[?1034huhx02:/home/o/opieca/ICS212/homework3b% ./homework3b 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+Please enter the account number:
+0
+That value was not a valid integer. Please try again.
+-1
+That value was not a valid integer. Please try again.
+123
+
+Please enter name (press Enter twice to exit):
+Craig Opie
+
+Please enter the address (press Enter twice to exit):
+Address
+
+STUB - You added a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 2
+Please enter the account number:
+123
+
+STUB - You printed a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 3
+STUB - You printed all records.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 4
+Please enter the account number:
+123
+
+Please enter the address (press Enter twice to exit):
+1680 Exa  ast-West Road
+Honolulu, Hi I 96822
+
+STUB - You modified the address.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 5
+Please enter the account number:
+123
+
+STUB - You deleted a record.
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 6
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b test
+ERROR: improper use of arguments
+NAME
+	homework3b - bank database application
+
+SYNOPSIS
+	homework3b [debug]
+
+DESCRIPTION
+	homework3b allows a banker to create, modify, view
+	and delete information about clients.
+
+OPTIONS
+	debug
+		Enters debug mode and provides amplifying
+		information about each function that is operating.
+
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b test[K[K[K[Kdebug test
+ERROR: improper use of arguments
+NAME
+	homework3b - bank database application
+
+SYNOPSIS
+	homework3b [debug]
+
+DESCRIPTION
+	homework3b allows a banker to create, modify, view
+	and delete information about clients.
+
+OPTIONS
+	debug
+		Enters debug mode and provides amplifying
+		information about each function that is operating.
+
+]0;opieca@uhx02:~/ICS212/homework3buhx02:/home/o/opieca/ICS212/homework3b% ./homework3b debug
+
+
+FUNCTION NAME: introMessage
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 1
+
+
+FUNCTION NAME: callMenuItem
+choice: 1
+
+
+FUNCTION NAME: userAddRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+
+Please enter name (press Enter twice to exit):
+
+
+FUNCTION NAME: getName
+size: 25
+Opie, Craig A.%
+
+Please enter the address (press Enter twice to exit):
+
+
+FUNCTION NAME: getAddress
+text: 
+size: 80
+1680-  East-West Road
+Honolulu, HI 96813  22
+
+
+
+FUNCTION NAME: addRecord
+Account Number: 12345
+Name: Opie Craig A
+Address: 1680 East-West Road
+Honolulu, HI 96822
+STUB - You added a record.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 2
+
+
+FUNCTION NAME: callMenuItem
+choice: 2
+
+
+FUNCTION NAME: userPrintRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+
+
+FUNCTION NAME: printRecord
+Account Number: 12345
+
+STUB - You printed a record.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 3
+
+
+FUNCTION NAME: callMenuItem
+choice: 3
+
+
+FUNCTION NAME: printAllRecords
+STUB - You printed all records.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 4
+
+
+FUNCTION NAME: callMenuItem
+choice: 4
+
+
+FUNCTION NAME: userModifyRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 0
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 1
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 2
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 3
+
+
+FUNCTION NAME: exponent
+base: 10
+exp: 4
+
+Please enter the address (press Enter twice to exit):
+
+
+FUNCTION NAME: getAddress
+text: @
+size: 80
+POST 518
+1680 East-West Road
+Honolulu, HI 96822
+
+
+
+FUNCTION NAME: modifyRecord
+Account Number: 12345
+Address: POST 518
+1680 East-West Road
+Honolulu, HI 96822
+STUB - You modified the address.
+
+
+FUNCTION NAME: menu
+
+Please choose a menu option by typing the corresponding number and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 5
+
+
+FUNCTION NAME: callMenuItem
+choice: 5
+
+
+FUNCTION NAME: userDeleteRecord
+Please enter the account number:
+
+
+FUNCTION NAME: getIntFromUser
+12345
+
+
+FUNCTION NAME: exponent
+base: 10

@@ -9,4 +9,4 @@ database.o: database.c database.h
 ready:
 		touch main.c user_interface.c database.c
 clean:
-		rm -f *.o homework3b
+		rm -f *.o homework3b proof.txt output.txt
