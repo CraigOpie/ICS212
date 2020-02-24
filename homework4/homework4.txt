@@ -1,0 +1,34 @@
+--------------------------------------------------------------------------------
+addRecord
+
+*** Assume the following variables are already defined. ***
+
+- start: The pointer to the first record of the list (or NULL)
+- uaccountno: The user's account number (integer)
+- uname: a character array containing the user's name
+- uaddress: a character array containing the user's address
+--------------------------------------------------------------------------------
+
+define a pointer to record called temp
+define a pointer to record called last
+define an int called wrote
+copy from start to last
+copy from -1 to wrote
+
+while( next in the record whose address is in last is not equal to NULL )
+    copy from next in the record whose address is in last to last
+
+if( start is equal to last )
+    copy from uaccountno to accountno in the record whose address is in last
+    copy from uname to name in the record whose address is in last
+    copy from uaddress to address in the record whose address is in last
+    copy from 0 to wrote
+else
+    allocate a heap space and store its address into temp
+    copy from uaccountno to accountno in the record whose address is in temp
+    copy from uname to name in the record whose address is in temp
+    copy from uaddress to address in the record whose address is in temp
+    copy from temp to next in the record whose address is in last
+    copy from 0 to wrote
+
+return wrote
