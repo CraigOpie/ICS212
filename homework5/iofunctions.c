@@ -18,7 +18,6 @@
 ******************************************************************************/
 
 #include <stdio.h>
-#include "record.h"
 #include "iofunctions.h"
 
 int exponent(int base, int exp);
