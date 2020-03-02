@@ -32,13 +32,13 @@
 //
 ******************************************************************************/
 
-int main( int argc, char argv[] )
+int main( int argc, char * argv[] )
 {
-    struct record accarray[25];
-    int numcust;
+    struct record bankone[5];
+    int numcustomers;
 
-    readfile(accarray[], &numcust, "test.txt");
-    writefile(accarray[], numcust, "outfile.txt");
+    readfile(bankone, &numcustomers, "test.txt");
+    writefile(bankone, numcustomers, "outfile.txt");
 
     return 0;
 }
