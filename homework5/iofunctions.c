@@ -135,7 +135,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     {
         if (item == 0)
         {
-            fprintf(file_p, accarray[count].accountno + '\n', text);
+            fprintf(file_p, accarray[count].accountno + '\n');
             item = 1;
         }
         if (item == 1)
@@ -144,7 +144,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
             while (currentChar != '\n')
             {
                 currentChar = accarray[count].name[i];
-                fprintf(file_p, currentChar, text);
+                fprintf(file_p, currentChar);
                 i++;
             }
             item = 2;
@@ -155,7 +155,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
             while (currentChar != '\n')
             {
                 currentChar = accarray[count].address[i];
-                fprintf(file_p, currentChar, text);
+                fprintf(file_p, currentChar);
                 i++;
             }
             item = 0;
