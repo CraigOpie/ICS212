@@ -22,6 +22,7 @@
 #include "iofunctions.h"
 
 int exponent(int base, int exp);
+int strToInt(char[] user_input);
 
 /******************************************************************************
 //
