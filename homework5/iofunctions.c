@@ -181,11 +181,10 @@ int writefile( struct record accarray[], int numcust, char filename[] )
 //
 ******************************************************************************/
 
-int strToInt()
+int strToInt(char[] user_input)
 {
-    char user_input[80];
     int i;
-    int size_user_input = 0;
+    int size_user_input = 80;
     int bad_input = 1;
     int digits;
     int valid_int;
