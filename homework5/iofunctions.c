@@ -44,6 +44,7 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     int item = 0;
     int lines = 0;
     int loop = 1;
+    int temp = 0;
     char currentChar = '\0';
 
     FILE * file_p;
@@ -75,10 +76,10 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     {
         if (item == 0)
         {
-            printf("trying fgets");
             fgets(accountnoC, 80, file_p);
-            printf("completed fgets accno");
-            *accarray[count].accountno = strToInt(accountnoC);
+            temp = strToInt(accountnoC);
+            printf("%d", temp);
+            accarray[count].accountno = strToInt(accountnoC);
             printf("completed writing to struct");
             item = 1;
             i++;
@@ -212,6 +213,7 @@ int strToInt(char user_input[])
     int digits;
     int valid_int;
 
+    printf("In strToStr\n");
     do
     {
         fgets(user_input, 80, stdin);
