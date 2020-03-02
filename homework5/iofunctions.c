@@ -123,9 +123,8 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     int i = 0;
     char currentChar = '\0';
 
-    FILE * file_p;
+    FILE * file_p = fopen("outfile.txt", "w");
 
-    file_p = fopen("outfile.txt", "w");
     if (file_p == NULL)
     {
         success = -1;
@@ -135,7 +134,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     {
         if (item == 0)
         {
-            fprintf(file_p, accarray[count].accountno + '\n');
+            fprintf(file_p, *accarray[count].accountno + '\n');
             item = 1;
         }
         if (item == 1)
