@@ -37,8 +37,8 @@ int main( int argc, char argv[] )
     struct record accarray[25];
     int numcust;
 
-    readfile(accarray, &numcust, "test.txt");
-    writefile(accarray, numcust, "outfile.txt");
+    readfile(accarray[], &numcust, "test.txt");
+    writefile(accarray[], numcust, "outfile.txt");
 
     return 0;
 }
