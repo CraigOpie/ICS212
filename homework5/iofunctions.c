@@ -21,6 +21,8 @@
 #include "record.h"
 #include "iofunctions.h"
 
+int exponent(int base, int exp);
+
 /******************************************************************************
 //
 //  FUNCTION NAME: readfile
@@ -121,9 +123,6 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     char currentChar = '\0';
 
     FILE * file_p;
-    int accuntno;
-    char name[25];
-    char address[80];
 
     file_p = fopen("outfile.txt", "w");
     if (file_p == NULL)
