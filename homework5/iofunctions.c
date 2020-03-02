@@ -22,7 +22,7 @@
 #include "iofunctions.h"
 
 int exponent(int base, int exp);
-int strToInt(char[] user_input);
+int strToInt(char user_input[]);
 
 /******************************************************************************
 //
@@ -182,7 +182,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
 //
 ******************************************************************************/
 
-int strToInt(char[] user_input)
+int strToInt(char user_input[])
 {
     int i;
     int size_user_input = 80;
