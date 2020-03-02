@@ -1,6 +1,6 @@
-homework1: homework1.o
-		gcc -o homework1 homework1.o
-homework1.o: homework1.c
-		gcc -ansi -pedantic-errors -Wall -c homework1.c
+homework5: iofunctions.o
+		gcc -o homework5 iofunctions.o
+iofunctions.o: iofunctions.c iofunctions.h
+		gcc -ansi -pedantic-errors -Wall -c iofunctions.c
 clean:
-		rm -f homework1.o homework1
+		rm -f homework5.o homework5
