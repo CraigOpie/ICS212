@@ -19,6 +19,7 @@
 
 #include <stdio.h>
 #include "iofunctions.h"
+#include "record.h"
 
 /******************************************************************************
 //
@@ -37,8 +38,8 @@ int main( int argc, char * argv[] )
     struct record bankone[5];
     int numcustomers;
 
-    readfile(bankone*, &numcustomers, "test.txt");
-    writefile(bankone*, numcustomers, "outfile.txt");
+    readfile(bankone, &numcustomers, argv[1]);
+    writefile(bankone, numcustomers, argv[2]);
 
     return 0;
 }
