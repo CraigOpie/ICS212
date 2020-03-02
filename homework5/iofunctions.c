@@ -40,6 +40,7 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     int success = 0;
     int count = 0;
     int i = 0;
+    int c = 0;
     int item = 0;
     int lines = 0;
     int loop = 1;
@@ -51,30 +52,23 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     file_p = fopen(filename, "r");
     if (file_p == NULL)
     {
-        printf("%s not found.", filename);
         success = -1;
     }
 
     while (loop)
     {
         currentChar = fgetc(file_p);
-        printf("%c", currentChar);
         if (currentChar == '\n')
         {
             lines++;
-            printf("%d\n", lines);
         }
         if (currentChar == EOF)
         {
-            printf("EOF");
             loop = 0;
         }
     }
-    printf("out of loop\n");
 
     fclose(file_p);
-
-    printf("file closed\n");
 
     file_p = fopen(filename, "r");
     while (i < lines)
@@ -83,7 +77,9 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
         {
             printf("trying fgets");
             fgets(accountnoC, 80, file_p);
-            accarray[count].accountno = strToInt(accountnoC);
+            printf("completed fgets accno");
+            *accarray[count].accountno = strToInt(accountnoC);
+            printf("completed writing to struct");
             item = 1;
             i++;
         }
