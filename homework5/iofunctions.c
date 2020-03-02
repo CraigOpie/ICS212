@@ -42,13 +42,9 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     int lines = 0;
     int loop = 1;
     char currentChar = '\0';
-    char lastChar = '\0';
 
     FILE * file_p;
-    int accuntno;
     char accountnoC[80];
-    char name[25];
-    char address[80];
 
     file_p = fopen(filename, "r");
     if (file_p == NULL)
@@ -75,7 +71,7 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     file_p = fopen(filename, "r");
     while (i < lines)
     {
-        if (item = 0)
+        if (item == 0)
         {
             fgets(accountnoC, 80, file_p);
             accarray[count].accountno = strToInt(accountnoC);
@@ -83,14 +79,14 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
             i++;
         }
         accountnoC[79] = '\0';
-        if (item = 1)
+        if (item == 1)
         {
             fgets(accarray[count].name, 25, file_p);
             item = 2;
             i++;
         }
         accarray[count].name[24] = '\0';
-        if (item = 3)
+        if (item == 3)
         {
             fgets(accarray[count].address, 80, file_p);
             item = 0;
@@ -99,7 +95,7 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
         accarray[count].address[79] = '\0';
         count++;
     }
-    numcust = lines / 3;
+    *numcust = lines / 3;
 
     return success;
 }
@@ -129,7 +125,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     char name[25];
     char address[80];
 
-    file_p = fopen('outfile.txt', "w");
+    file_p = fopen("outfile.txt", "w");
     if (file_p == NULL)
     {
         success = -1;
@@ -137,12 +133,12 @@ int writefile( struct record accarray[], int numcust, char filename[] )
 
     while (currentChar != EOF)
     {
-        if (item = 0)
+        if (item == 0)
         {
             fprintf(file_p, accarray[count].accountno + '\n', text);
             item = 1;
         }
-        if (item = 1)
+        if (item == 1)
         {
             i = 0;
             while (currentChar != '\n')
@@ -153,7 +149,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
             }
             item = 2;
         }
-        if (item = 2)
+        if (item == 2)
         {
             i = 0;
             while (currentChar != '\n')
