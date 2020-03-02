@@ -37,8 +37,8 @@ int main( int argc, char * argv[] )
     struct record bankone[5];
     int numcustomers;
 
-    readfile(bankone, &numcustomers, "test.txt");
-    writefile(bankone, numcustomers, "outfile.txt");
+    readfile(bankone*, &numcustomers, "test.txt");
+    writefile(bankone*, numcustomers, "outfile.txt");
 
     return 0;
 }
