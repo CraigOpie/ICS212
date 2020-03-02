@@ -122,7 +122,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     int item = 0;
     int i = 0;
     char currentChar = '\0';
-    char[80] accountnoC;
+    char accountnoC[80];
 
     FILE * file_p = fopen("outfile.txt", "w");
 
