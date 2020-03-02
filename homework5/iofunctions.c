@@ -82,21 +82,21 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
             item = 1;
             i++;
         }
-        accountnoC[79] = '\0'
+        accountnoC[79] = '\0';
         if (item = 1)
         {
             fgets(accarray[count].name, 25, file_p);
             item = 2;
             i++;
         }
-        accarray[count].name[24] = '\0'
+        accarray[count].name[24] = '\0';
         if (item = 3)
         {
             fgets(accarray[count].address, 80, file_p);
             item = 0;
             i++;
         }
-        accarray[count].address[79] = '\0'
+        accarray[count].address[79] = '\0';
         count++;
     }
     numcust = lines / 3;
