@@ -50,7 +50,7 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
 
     printf("%p\n", accarray);
     printf("%p\n", numcust);
-    printf("%d\n", numcust);
+    printf("%d\n", *numcust);
     printf("%p\n", filename);
     printf("%s\n", filename);
 
