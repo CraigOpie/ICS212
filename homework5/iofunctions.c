@@ -123,6 +123,8 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     int i = 0;
     char currentChar = '\0';
     char accountnoC[80];
+    char nameStr[25];
+    char addressStr[80];
 
     FILE * file_p = fopen("outfile.txt", "w");
 
@@ -147,9 +149,11 @@ int writefile( struct record accarray[], int numcust, char filename[] )
             while (currentChar != '\n')
             {
                 currentChar = accarray[count].name[i];
-                fprintf(file_p, *currentChar);
+                nameStr[i] = currentChar;
                 i++;
             }
+            nameStr[24] = '\0';
+            fprintf(file_p, nameStr);
             item = 2;
         }
         if (item == 2)
@@ -158,10 +162,22 @@ int writefile( struct record accarray[], int numcust, char filename[] )
             while (currentChar != '\n')
             {
                 currentChar = accarray[count].address[i];
-                fprintf(file_p, *currentChar);
+                addressStr[i] = currentChar;
                 i++;
             }
+            addressStr[79] = '\0';
+            fprintf(file_p, addressStr);
             item = 0;
+        }
+        i = 0;
+        while (i < 25)
+        {
+            nameStr[i] = '\0';
+        }
+        i = 0;
+        while (i < 80)
+        {
+            addressStr[i] = '\0';
         }
         count++;
     }
