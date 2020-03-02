@@ -48,6 +48,12 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     FILE * file_p;
     char accountnoC[80];
 
+    printf("%p\n", accarray);
+    printf("%p\n", numcust);
+    printf("%d\n", numcust);
+    printf("%p\n", filename);
+    printf("%s\n", filename);
+
     file_p = fopen(filename, "r");
     if (file_p == NULL)
     {
