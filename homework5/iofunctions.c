@@ -21,7 +21,7 @@
 #include "iofunctions.h"
 
 int exponent(int base, int exp);
-int strToInt(char user_input[]);
+int strToInt(char user_input[], int length);
 
 /******************************************************************************
 //
@@ -40,12 +40,14 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     int success = 0;
     int count = 0;
     int i = 0;
-    int c = 0;
+    int j = 0;
     int item = 0;
     int lines = 0;
     int loop = 1;
     int temp = 0;
     char currentChar = '\0';
+    char tempName[25];
+    char tempAdd[80];
 
     FILE * file_p;
     char accountnoC[80];
@@ -77,31 +79,44 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
         if (item == 0)
         {
             fgets(accountnoC, 80, file_p);
-            temp = strToInt(accountnoC);
-            printf("%d", temp);
-            accarray[count].accountno = strToInt(accountnoC);
-            printf("completed writing to struct");
+            temp = strToInt(accountnoC, 80);
+            accarray[count].accountno = temp;
             item = 1;
             i++;
         }
-        printf("%d", i);
-        accountnoC[79] = '\0';
         if (item == 1)
         {
-            fgets(accarray[count].name, 25, file_p);
+            printf("%d\n", accarray[0].accountno);
+            printf("%d\n", count);
+            fgets(tempName, 25, file_p);
+            tempName[24] = '\0';
+            loop = 1;
+            while (j < 25)
+            {
+                accarray[count].name[j] = tempName[j];
+                j++;
+            }
+            printf("Made it");
             item = 2;
             i++;
         }
+        /*
         accarray[count].name[24] = '\0';
+        */
         if (item == 3)
         {
             fgets(accarray[count].address, 80, file_p);
             item = 0;
             i++;
         }
+        /*
         accarray[count].address[79] = '\0';
+        */
         count++;
     }
+    printf("%d\n", accarray[0].accountno);
+    printf("%s\n", accarray[0].name);
+    printf("%s\n", accarray[0].address);
     *numcust = lines / 3;
 
     return success;
@@ -205,19 +220,17 @@ int writefile( struct record accarray[], int numcust, char filename[] )
 //
 ******************************************************************************/
 
-int strToInt(char user_input[])
+int strToInt(char user_input[], int length)
 {
     int i;
-    int size_user_input = 80;
+    int size_user_input = 0;
     int bad_input = 1;
     int digits;
     int valid_int;
 
-    printf("In strToStr\n");
     do
     {
-        fgets(user_input, 80, stdin);
-        for (i = 0; i < 80; i++)
+        for (i = 0; i < length; i++)
         {
             if (((int)user_input[i] > 47) && ((int)user_input[i] < 58))
             {
@@ -225,11 +238,11 @@ int strToInt(char user_input[])
                 size_user_input++;
             }
         }
-        for (i = (size_user_input - 1); i < 80; i++)
+        for (i = size_user_input; i < length; i++)
         {
             user_input[i] = '\0';
         }
-        for (i = 0; i < 80; i++)
+        for (i = 0; i < length; i++)
         {
             if ((int)user_input[i] == 3)
             {
@@ -238,7 +251,7 @@ int strToInt(char user_input[])
         }
         digits = 0;
         valid_int = 0;
-        for (i = (size_user_input - 1); i >= 0; i--)
+        for (i = size_user_input; i >= 0; i--)
         {
             if (((int)user_input[i] > 47) && ((int)user_input[i] < 58))
             {
@@ -260,7 +273,7 @@ int strToInt(char user_input[])
         }
         if (bad_input == 1)
         {
-            for (i = 0; i < 80; i++)
+            for (i = 0; i < length; i++)
             {
                 user_input[i] = '\0';
             }
