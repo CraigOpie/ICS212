@@ -18,6 +18,8 @@
 ******************************************************************************/
 
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
 #include "iofunctions.h"
 
 int exponent(int base, int exp);
@@ -67,6 +69,7 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
         i++;
         if (currentChar == '\n')
         {
+            master[lines][79] = '\0';
             lines++;
             i = 0;
         }
@@ -75,53 +78,33 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
             loop = 0;
         }
     }
-    i = 0;
     fclose(file_p);
 
-    file_p = fopen(filename, "r");
+    i = 0;
+
     while (i < lines)
     {
-        if (item == 0)
+        if (i % 3 == 0)
         {
-            fgets(accountnoC, 80, file_p);
-            temp = strToInt(accountnoC, 80);
+            temp = strToInt(master[i][], 80);
             accarray[count].accountno = temp;
-            item = 1;
-            i++;
         }
-        if (item == 1)
+        if (i % 3 == 1)
         {
-            printf("%d\n", accarray[0].accountno);
-            printf("%d\n", count);
-            fgets(tempName, 25, file_p);
-            tempName[24] = '\0';
-            loop = 1;
-            while (j < 25)
-            {
-                accarray[count].name[j] = tempName[j];
-                j++;
-            }
-            printf("Made it");
-            item = 2;
-            i++;
+            strcpy(accarray[count].name, master[i][]);
         }
-        /*
-        accarray[count].name[24] = '\0';
-        */
-        if (item == 3)
+        if (i % 3 == 2)
         {
-            fgets(accarray[count].address, 80, file_p);
-            item = 0;
-            i++;
+            strcpy(accarray[count].address, master[i][]);
         }
-        /*
-        accarray[count].address[79] = '\0';
-        */
-        count++;
+        i++;
+        count = (int)(floor(i / 3));
     }
+
     printf("%d\n", accarray[0].accountno);
     printf("%s\n", accarray[0].name);
     printf("%s\n", accarray[0].address);
+
     *numcust = lines / 3;
 
     return success;
