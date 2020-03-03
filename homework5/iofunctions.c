@@ -48,6 +48,7 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     char currentChar = '\0';
     char tempName[25];
     char tempAdd[80];
+    char master[15][80];
 
     FILE * file_p;
     char accountnoC[80];
@@ -61,16 +62,20 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     while (loop)
     {
         currentChar = fgetc(file_p);
+        master[lines][i] = currentChar;
+        printf("%c", master[lines][i]);
+        i++;
         if (currentChar == '\n')
         {
             lines++;
+            i = 0;
         }
         if (currentChar == EOF)
         {
             loop = 0;
         }
     }
-
+    i = 0;
     fclose(file_p);
 
     file_p = fopen(filename, "r");
