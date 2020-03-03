@@ -37,11 +37,9 @@ int main( int argc, char * argv[] )
 {
     struct record bankone[5];
     int numcustomers = 0;
-    
+
     readfile(bankone, &numcustomers, "test.txt");
-    printf("\ncompleted readfile");
     writefile(bankone, numcustomers, "outfile.txt");
-    printf("\ncompleted writefile");
 
     return 0;
 }

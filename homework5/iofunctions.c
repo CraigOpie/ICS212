@@ -19,7 +19,6 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <math.h>
 #include "iofunctions.h"
 
 int exponent(int base, int exp);
@@ -59,8 +58,14 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     while (loop)
     {
         currentChar = fgetc(file_p);
-        master[lines][i] = currentChar;
-        printf("%c", master[lines][i]);
+        if (currentChar == EOF)
+        {
+            master[lines][i] = '\0';
+        }
+        else
+        {
+            master[lines][i] = currentChar;
+        }
         i++;
         if (currentChar == '\n')
         {
@@ -70,37 +75,34 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
         }
         if (currentChar == EOF)
         {
+            master[lines][79] = '\0';
+            i = 0;
             loop = 0;
         }
     }
+    
     fclose(file_p);
 
-    i = 0;
-
-    while (i < lines)
+    while (i <= lines)
     {
         if (i % 3 == 0)
         {
-            temp = strToInt(master[i][], 80);
+            temp = strToInt(master[i], 80);
             accarray[count].accountno = temp;
         }
         if (i % 3 == 1)
         {
-            strcpy(accarray[count].name, master[i][]);
+            strcpy(accarray[count].name, master[i]);
         }
         if (i % 3 == 2)
         {
-            strcpy(accarray[count].address, master[i][]);
+            strcpy(accarray[count].address, master[i]);
+            count++;
         }
         i++;
-        count = (int)(floor(i / 3));
     }
 
-    printf("%d\n", accarray[0].accountno);
-    printf("%s\n", accarray[0].name);
-    printf("%s\n", accarray[0].address);
-
-    *numcust = lines / 3;
+    *numcust = (int)((lines+1) / 3);
 
     return success;
 }
@@ -127,10 +129,11 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     char accountnoC[80];
     char nameStr[25];
     char addressStr[80];
+    
+    FILE * wfile_p;
+    wfile_p = fopen(filename, "w");
 
-    FILE * file_p = fopen("outfile.txt", "w");
-
-    if (file_p == NULL)
+    if (wfile_p == NULL)
     {
         success = -1;
     }
@@ -142,7 +145,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
             sprintf(accountnoC, "%d", accarray[count].accountno);
             accountnoC[78] = 'n';
             accountnoC[79] = '\0';
-            fprintf(file_p, accountnoC);
+            fprintf(wfile_p, accountnoC);
             item = 1;
         }
         if (item == 1)
@@ -155,7 +158,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
                 i++;
             }
             nameStr[24] = '\0';
-            fprintf(file_p, nameStr);
+            fprintf(wfile_p, nameStr);
             item = 2;
         }
         if (item == 2)
@@ -168,7 +171,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
                 i++;
             }
             addressStr[79] = '\0';
-            fprintf(file_p, addressStr);
+            fprintf(wfile_p, addressStr);
             item = 0;
         }
         i = 0;
@@ -184,7 +187,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
         count++;
     }
 
-    fclose(file_p);
+    fclose(wfile_p);
 
     return success;
 }
