@@ -42,18 +42,13 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
     int success = 0;
     int count = 0;
     int i = 0;
-    int j = 0;
-    int item = 0;
     int lines = 0;
     int loop = 1;
     int temp = 0;
     char currentChar = '\0';
-    char tempName[25];
-    char tempAdd[80];
     char master[15][80];
 
     FILE * file_p;
-    char accountnoC[80];
     
     file_p = fopen(filename, "r");
     if (file_p == NULL)
