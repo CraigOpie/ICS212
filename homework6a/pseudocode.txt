@@ -1,0 +1,25 @@
+-----------------------------------
+deleteRecord
+
+- start: The pointer to the first record of the list (or NULL)
+- uaccountno: The user's account number (integer)
+-----------------------------------
+
+define int called success
+define struct record pointer called temp
+define struct record pointer called tempNext
+
+copy from -1 to success
+copy from start to temp
+copy from start.next to tempNext
+
+while ( next in the record whose address is in temp is not equal to null )
+    if ( accountno in the record whose address is in temp is equal to uaccountno )
+        release the space whose address is in temp
+        copy from nextTemp to temp 
+        copy from temp.next to tempNext
+        copy from 0 to success
+    copy from tempNext to temp
+    copy from tempNext.next to tempNext
+
+return success

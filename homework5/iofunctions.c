@@ -130,7 +130,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     char nameStr[25];
     char addressStr[80];
     
-    FILE * wfile_p;
+    FILE *wfile_p;
     wfile_p = fopen(filename, "w");
 
     if (wfile_p == NULL)
