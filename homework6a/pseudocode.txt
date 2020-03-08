@@ -10,16 +10,23 @@ define struct record pointer called temp
 define struct record pointer called tempNext
 
 copy from -1 to success
-copy from start to temp
-copy from start.next to tempNext
 
-while ( next in the record whose address is in temp is not equal to null )
-    if ( accountno in the record whose address is in temp is equal to uaccountno )
-        release the space whose address is in temp
-        copy from nextTemp to temp 
-        copy from temp.next to tempNext
-        copy from 0 to success
-    copy from tempNext to temp
-    copy from tempNext.next to tempNext
+if ( start is not equal to null )
+    copy from start to temp
+    copy from next whose address is in start to tempNext
+    while ( next in the record whose address is in temp is not equal to null )
+        if ( accountno in the record whose address is in temp is equal to uaccountno )
+            release the space whose address is in temp
+            copy from nextTemp to temp 
+            copy from next whose address is in temp to tempNext
+            copy from 0 to success
+        if ( next in the record whose address is in temp is not equal to null )
+            copy from tempNext to temp
+            copy from next whose address is in temp to tempNext
+
+    if ( next in the record whose address is in temp is equal to null )
+        if ( accountno in the record whose address is in temp is equal to uaccountno )
+            release the space whose address is in temp
+            copy from 0 to success
 
 return success
