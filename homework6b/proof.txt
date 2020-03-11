@@ -1,0 +1,52 @@
+Script started on Sun 08 Mar 2020 12:04:27 AM HST
+]0;opieca@uhx02:~/ICS212/git_practice[?1034huhx02:/home/o/opieca/ICS212/git_practice% git log --pretty='%h %ad %cn: %s %d'
+[?1h=19b0f92 Sun Mar 8 00:02:04 2020 -1000 Craig Opie: Add files of homework3b  (HEAD, master)[m
+[K[?1l>]0;opieca@uhx02:~/ICS212/git_practiceuhx02:/home/o/opieca/ICS212/git_practice% git status
+# On branch master
+nothing to commit, working directory clean
+]0;opieca@uhx02:~/ICS212/git_practiceuhx02:/home/o/opieca/ICS212/git_practice% ls -la
+total 84
+drwxr-xr-x.  3 opieca uh   205 Mar  8 00:04 [0m[38;5;27m.[0m
+drwxr-xr-x. 13 opieca uh   228 Mar  7 23:59 [38;5;27m..[0m
+-rw-r--r--.  1 opieca uh  4177 Mar  7 23:59 database.c
+-rw-r--r--.  1 opieca uh  1246 Mar  7 23:59 database.h
+drwxr-xr-x.  8 opieca uh   166 Mar  8 00:04 [38;5;27m.git[0m
+-rw-r--r--.  1 opieca uh    41 Mar  8 00:01 .gitignore
+-rw-r--r--.  1 opieca uh 34551 Mar  7 23:59 [38;5;9mhomework3b.zip[0m
+-rw-r--r--.  1 opieca uh  2191 Mar  7 23:59 main.c
+-rw-r--r--.  1 opieca uh   453 Mar  7 23:59 Makefile
+-rw-r--r--.  1 opieca uh     0 Mar  8 00:04 proof.txt
+-rw-r--r--.  1 opieca uh   672 Mar  7 23:59 record.h
+-rw-r--r--.  1 opieca uh 13077 Mar  7 23:59 user_interface.c
+-rw-r--r--.  1 opieca uh  1547 Mar  7 23:59 user_interface.h
+]0;opieca@uhx02:~/ICS212/git_practiceuhx02:/home/o/opieca/ICS212/git_practice% make
+gcc -ansi -pedantic-errors -Wall -c main.c
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -ansi -pedantic-errors -Wall -c database.c
+gcc -o homework3b main.o user_interface.o database.o
+]0;opieca@uhx02:~/ICS212/git_practiceuhx02:/home/o/opieca/ICS212/git_practice% git status
+# On branch master
+nothing to commit, working directory clean
+]0;opieca@uhx02:~/ICS212/git_practiceuhx02:/home/o/opieca/ICS212/git_practice% ls -la
+total 120
+drwxr-xr-x.  3 opieca uh   279 Mar  8 00:05 [0m[38;5;27m.[0m
+drwxr-xr-x. 13 opieca uh   228 Mar  7 23:59 [38;5;27m..[0m
+-rw-r--r--.  1 opieca uh  4177 Mar  7 23:59 database.c
+-rw-r--r--.  1 opieca uh  1246 Mar  7 23:59 database.h
+-rw-r--r--.  1 opieca uh  3576 Mar  8 00:05 database.o
+drwxr-xr-x.  8 opieca uh   166 Mar  8 00:05 [38;5;27m.git[0m
+-rw-r--r--.  1 opieca uh    41 Mar  8 00:01 .gitignore
+-rwxr-xr-x.  1 opieca uh 13480 Mar  8 00:05 [38;5;34mhomework3b[0m
+-rw-r--r--.  1 opieca uh 34551 Mar  7 23:59 [38;5;9mhomework3b.zip[0m
+-rw-r--r--.  1 opieca uh  2191 Mar  7 23:59 main.c
+-rw-r--r--.  1 opieca uh  2920 Mar  8 00:05 main.o
+-rw-r--r--.  1 opieca uh   453 Mar  7 23:59 Makefile
+-rw-r--r--.  1 opieca uh     0 Mar  8 00:04 proof.txt
+-rw-r--r--.  1 opieca uh   672 Mar  7 23:59 record.h
+-rw-r--r--.  1 opieca uh 13077 Mar  7 23:59 user_interface.c
+-rw-r--r--.  1 opieca uh  1547 Mar  7 23:59 user_interface.h
+-rw-r--r--.  1 opieca uh  9032 Mar  8 00:05 user_interface.o
+]0;opieca@uhx02:~/ICS212/git_practiceuhx02:/home/o/opieca/ICS212/git_practice% exit
+exit
+
+Script done on Sun 08 Mar 2020 12:05:21 AM HST

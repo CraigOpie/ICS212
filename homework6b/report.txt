@@ -1,0 +1,7 @@
+The purpose of git is to have revision control of files during collaborative efforts.
+git init initiaties a git repository under the directory named.
+git add adds the fill(s) specified.  You can use git add .  to add files in that directory or git add -A to add all files and folders in subdirectories.
+git commit commits the changes to git and the -m flag adds a message to describe the changes.  A message is required for all commits.
+git status displays the files that have been added to the git repository.
+git log displays a log of all commands performed by git.  --pretty cleans the log to be formatted as specified by the user. %h is an abreviated commit hash, %ad is author date, %cn commiter name, %s is subject, and %d is reference names.
+.gitignore identifies the files that should not be synced to the git repository.  using and ! before the value means do not ignore the file(s).
