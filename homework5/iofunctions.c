@@ -102,7 +102,7 @@ int readfile( struct record accarray[], int * numcust, char filename[] )
         i++;
     }
 
-    *numcust = (int)((lines+1) / 3);
+    *numcust = (int)((lines + 1) / 3);
 
     return success;
 }
@@ -130,22 +130,22 @@ int writefile( struct record accarray[], int numcust, char filename[] )
     char nameStr[25];
     char addressStr[80];
     
-    FILE *wfile_p;
-    wfile_p = fopen(filename, "w");
+    FILE * file_p;
+    file_p = fopen(filename, "w");
 
-    if (wfile_p == NULL)
+    if (file_p == NULL)
     {
         success = -1;
     }
 
-    while (currentChar != EOF)
+    while (count < numcust)
     {
         if (item == 0)
         {
             sprintf(accountnoC, "%d", accarray[count].accountno);
             accountnoC[78] = 'n';
             accountnoC[79] = '\0';
-            fprintf(wfile_p, accountnoC);
+            fprintf(file_p, accountnoC);
             item = 1;
         }
         if (item == 1)
@@ -158,7 +158,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
                 i++;
             }
             nameStr[24] = '\0';
-            fprintf(wfile_p, nameStr);
+            fprintf(file_p, nameStr);
             item = 2;
         }
         if (item == 2)
@@ -171,7 +171,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
                 i++;
             }
             addressStr[79] = '\0';
-            fprintf(wfile_p, addressStr);
+            fprintf(file_p, addressStr);
             item = 0;
         }
         i = 0;
@@ -187,7 +187,7 @@ int writefile( struct record accarray[], int numcust, char filename[] )
         count++;
     }
 
-    fclose(wfile_p);
+    fclose(file_p);
 
     return success;
 }
