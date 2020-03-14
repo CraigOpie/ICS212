@@ -20,6 +20,7 @@
 #include <string.h>
 #include "user_interface.h"
 #include "database.h"
+#include "iofunctions.h"
 #include "record.h"
 
 int debugMode = 1;
@@ -48,6 +49,7 @@ int main(int argc, char* argv[])
     }
     if (argc == 1 || (argc == 2 && debugMode == 0))
     {
+        readfile(&start, "test.txt");
         introMessage();
         while(loop == 0)
         {

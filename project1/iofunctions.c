@@ -18,6 +18,7 @@
 ******************************************************************************/
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "iofunctions.h"
 
@@ -36,158 +37,98 @@ int strToInt(char user_input[], int length);
 //
 ******************************************************************************/
 
-int readfile( struct record accarray[], int * numcust, char filename[] )
+int readfile( struct record ** accarray, char filename[] )
 {
-    int success = 0;
-    int count = 0;
-    int i = 0;
-    int lines = 0;
-    int loop = 1;
-    int temp = 0;
+    struct record * temp = *accarray;
+    char string[80];
     char currentChar = '\0';
-    char master[15][80];
+    int success = 0;
+    int item = 1;
+    int loop = 1;
+    int i = 0;
+    int accnum;
 
-    FILE * file_p;
+    FILE * in_file;
+    in_file = fopen(filename, "r");
     
-    file_p = fopen(filename, "r");
-    if (file_p == NULL)
+    if (in_file == NULL)
     {
         success = -1;
     }
 
     while (loop)
     {
-        currentChar = fgetc(file_p);
+        currentChar = fgetc(in_file);
         if (currentChar == EOF)
         {
-            master[lines][i] = '\0';
-        }
-        else
-        {
-            master[lines][i] = currentChar;
-        }
-        i++;
-        if (currentChar == '\n')
-        {
-            master[lines][79] = '\0';
-            lines++;
-            i = 0;
-        }
-        if (currentChar == EOF)
-        {
-            master[lines][79] = '\0';
-            i = 0;
             loop = 0;
         }
+
+        if (loop = 1)
+        {
+            if (temp == NULL)
+            {
+                *accarray = (struct record *) malloc(sizeof(struct record));
+                temp = *accarray;
+            }
+            else
+            {
+                temp->next = (struct record *) malloc(sizeof(struct record));
+                temp = temp->next;
+            }
+            
+            if (item % 3 == 0)
+            {
+                *string = '\0';
+                for (i = 0; i < 25; i++)
+                {
+                    string[i] = currentChar;
+                    if (currentChar == '\0')
+                    {
+                        i = 25;
+                    }
+                }
+
+                accnum = strToInt(string[], 25);
+                temp->accountno = accnum;
+                item++;
+            }
+
+            if (item % 3 == 1)
+            {
+                *string = '\0';
+                for (i = 0; i < 25; i++)
+                {
+                    string[i] = currentChar;
+                    if (currentChar == '\0')
+                    {
+                        i = 25;
+                    }
+                }
+
+                strcpy(temp->name, string);
+                item++;
+            }
+
+            if (item % 3 == 2)
+            {
+                *string = '\0';
+                for (i = 0; i < 80; i++)
+                {
+                    string[i] = currentChar;
+                    if (currentChar == '\0')
+                    {
+                        i = 80;
+                    }
+                }
+
+                strcpy(temp->address, string);
+                item++;
+            }
+        }
     }
     
-    fclose(file_p);
-
-    while (i <= lines)
-    {
-        if (i % 3 == 0)
-        {
-            temp = strToInt(master[i], 80);
-            accarray[count].accountno = temp;
-        }
-        if (i % 3 == 1)
-        {
-            strcpy(accarray[count].name, master[i]);
-        }
-        if (i % 3 == 2)
-        {
-            strcpy(accarray[count].address, master[i]);
-            count++;
-        }
-        i++;
-    }
-
-    *numcust = (int)((lines + 1) / 3);
-
-    return success;
-}
-
-/******************************************************************************
-//
-//  FUNCTION NAME: writefile
-//
-//  DESCRIPTION:   A function used to write to files
-//
-//  PARAMETERS:    None
-//
-//  RETURN VALUES: 0 : success
-//
-******************************************************************************/
-
-int writefile( struct record accarray[], int numcust, char filename[] )
-{
-    int success = 0;
-    int count = 0;
-    int item = 0;
-    int i = 0;
-    char currentChar = '\0';
-    char accountnoC[80];
-    char nameStr[25];
-    char addressStr[80];
-    
-    FILE * file_p;
-    file_p = fopen(filename, "w");
-
-    if (file_p == NULL)
-    {
-        success = -1;
-    }
-
-    while (count < numcust)
-    {
-        if (item == 0)
-        {
-            sprintf(accountnoC, "%d", accarray[count].accountno);
-            accountnoC[78] = 'n';
-            accountnoC[79] = '\0';
-            fprintf(file_p, accountnoC);
-            item = 1;
-        }
-        if (item == 1)
-        {
-            i = 0;
-            while (currentChar != '\n')
-            {
-                currentChar = accarray[count].name[i];
-                nameStr[i] = currentChar;
-                i++;
-            }
-            nameStr[24] = '\0';
-            fprintf(file_p, nameStr);
-            item = 2;
-        }
-        if (item == 2)
-        {
-            i = 0;
-            while (currentChar != '\n')
-            {
-                currentChar = accarray[count].address[i];
-                addressStr[i] = currentChar;
-                i++;
-            }
-            addressStr[79] = '\0';
-            fprintf(file_p, addressStr);
-            item = 0;
-        }
-        i = 0;
-        while (i < 25)
-        {
-            nameStr[i] = '\0';
-        }
-        i = 0;
-        while (i < 80)
-        {
-            addressStr[i] = '\0';
-        }
-        count++;
-    }
-
-    fclose(file_p);
+    fclose(in_file);
 
     return success;
 }

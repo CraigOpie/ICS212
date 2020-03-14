@@ -20,6 +20,7 @@
 #define _user_interface_h
 
 #include "database.h"
+#include "iofunctions.h"
 #include "record.h"
 
 extern int debugMode;

@@ -39,7 +39,7 @@ int main( int argc, char * argv[] )
     int numcustomers = 0;
 
     readfile(bankone, &numcustomers, "test.txt");
-    writefile(bankone, numcustomers, "outfile.txt");
+    /*writefile(bankone, numcustomers, "outfile.txt");*/
 
     return 0;
 }
