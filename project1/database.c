@@ -316,11 +316,10 @@ int deleteRecord(struct record ** entry, int accNum)
 //
 ******************************************************************************/
 
-int cleanup(struct record ** entry)
+void cleanup(struct record ** entry)
 {
     struct record * temp = *entry;
     struct record * last = *entry;
-    int deleted = -1;
 
     if (debugMode == 0)
     {
@@ -330,7 +329,6 @@ int cleanup(struct record ** entry)
     if (temp == NULL)
     {
         printf("\nThe database is empty.\n");
-        deleted = 0;
     }
     else
     {
@@ -342,7 +340,6 @@ int cleanup(struct record ** entry)
                 temp = NULL;
                 free(temp);
                 temp = *entry;
-                deleted = 0;
             }
             else
             {
@@ -350,7 +347,6 @@ int cleanup(struct record ** entry)
                 temp = NULL;
                 free(temp);
                 temp = last->next;
-                deleted = 0;
             }
 
             if(temp->next != NULL)
@@ -365,16 +361,12 @@ int cleanup(struct record ** entry)
             temp = NULL;
             free(temp);
             *entry = NULL;
-            deleted = 0;
         }
         else
         {
             temp = NULL;
             free(temp);
             last->next = NULL;
-            deleted = 0;
         }
     }
-    
-    return deleted;
 }

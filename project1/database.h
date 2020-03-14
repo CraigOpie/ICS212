@@ -42,6 +42,6 @@ int modifyRecord (struct record *, int, char []);
 int deleteRecord (struct record **, int);
 
 /* Releases all allocated heap space and assigns NULL to start */
-int cleanup(struct record ** entry);
+void cleanup(struct record ** entry);
 
 #endif

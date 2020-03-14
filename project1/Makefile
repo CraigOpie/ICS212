@@ -1,4 +1,4 @@
-project1: main.o user_interface.o database.o iofunctions.o
+project: main.o user_interface.o database.o iofunctions.o
 		gcc -o project1 main.o user_interface.o database.o iofunctions.o
 main.o: main.c
 		gcc -ansi -pedantic-errors -Wall -c main.c
@@ -11,4 +11,4 @@ database.o: database.c database.h
 ready:
 		touch main.c user_interface.c database.c iofunctions.c
 clean:
-		rm -f *.o project1 proof.txt .database
+		rm -f *.o project .database
