@@ -18,12 +18,8 @@
 ******************************************************************************/
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include "iofunctions.h"
-
-int exponent(int base, int exp);
-int strToInt(char user_input[], int length);
 
 /******************************************************************************
 //
@@ -39,97 +35,143 @@ int strToInt(char user_input[], int length);
 
 int readfile( struct record ** accarray, char filename[] )
 {
-    struct record * temp = *accarray;
-    char string[80];
-    char currentChar = '\0';
-    int success = 0;
-    int item = 1;
-    int loop = 1;
-    int i = 0;
-    int accnum;
-
     FILE * in_file;
+    int i;
+    int j;
+    int accnum;
+    int loop = 1;
+    int success = 0;
+    char parsed[3][80];
+
     in_file = fopen(filename, "r");
-    
+
     if (in_file == NULL)
     {
         success = -1;
     }
-
-    while (loop)
+    else
     {
-        currentChar = fgetc(in_file);
-        if (currentChar == EOF)
+        while(loop)
         {
-            loop = 0;
-        }
-
-        if (loop = 1)
-        {
-            if (temp == NULL)
+            for(i = 0; i < 3; i++)
             {
-                *accarray = (struct record *) malloc(sizeof(struct record));
-                temp = *accarray;
-            }
-            else
-            {
-                temp->next = (struct record *) malloc(sizeof(struct record));
-                temp = temp->next;
-            }
-            
-            if (item % 3 == 0)
-            {
-                *string = '\0';
-                for (i = 0; i < 25; i++)
+                if(fgets(parsed[i], 80, in_file) != NULL)
                 {
-                    string[i] = currentChar;
-                    if (currentChar == '\0')
+                    for(j = 0; j < 80; j++)
                     {
-                        i = 25;
+                        if(parsed[i][j] == '\n')
+                        {
+                            parsed[i][j] = '\0';
+                        }
+                        if(parsed[i][j] == ';')
+                        {
+                            parsed[i][j] = '\n';
+                        }
                     }
                 }
-
-                accnum = strToInt(string[], 25);
-                temp->accountno = accnum;
-                item++;
-            }
-
-            if (item % 3 == 1)
-            {
-                *string = '\0';
-                for (i = 0; i < 25; i++)
+                else
                 {
-                    string[i] = currentChar;
-                    if (currentChar == '\0')
+                    loop = 0;
+                }
+            }
+            if(loop)
+            {
+                accnum = strToInt(parsed[0], 80);
+                addRecord(accarray, accnum, parsed[1], parsed[2]);
+
+                for(i = 0; i < 3; i++)
+                {
+                    for(j = 0; j < 80; j++)
                     {
-                        i = 25;
+                        parsed[i][j] = '\0';
                     }
                 }
-
-                strcpy(temp->name, string);
-                item++;
-            }
-
-            if (item % 3 == 2)
-            {
-                *string = '\0';
-                for (i = 0; i < 80; i++)
-                {
-                    string[i] = currentChar;
-                    if (currentChar == '\0')
-                    {
-                        i = 80;
-                    }
-                }
-
-                strcpy(temp->address, string);
-                item++;
             }
         }
     }
-    
+
     fclose(in_file);
 
+    return success;
+}
+
+/******************************************************************************
+//
+//  FUNCTION NAME: writefile
+//
+//  DESCRIPTION:   A function used to write to files
+//
+//  PARAMETERS:    None
+//
+//  RETURN VALUES: 0 : success
+//
+******************************************************************************/
+
+int writefile( struct record * accarray, char filename[] )
+{
+    FILE * out_file;
+    struct record * temp = accarray;
+    int i;
+    int success = 0;
+
+    out_file = fopen(filename, "w");
+
+    printf("This works");
+
+    if (accarray != NULL)
+    {
+        if (out_file == NULL)
+        {
+            success = -1;
+        }
+        else
+        {
+            while (temp->next != NULL)
+            {
+                for (i = 0; i < 25; i++)
+                {
+                    if (temp->name[i] == '\n')
+                    {
+                        temp->name[i] = ';';
+                    }
+                }
+                for (i = 0; i < 80; i++)
+                {
+                    if (temp->address[i] == '\n')
+                    {
+                        temp->address[i] = ';';
+                    }
+                }
+
+                fprintf(out_file, "%d\n", temp->accountno);
+                fprintf(out_file, "%s\n", temp->name);
+                fprintf(out_file, "%s\n", temp->address);
+                temp = temp->next;
+            }
+            
+            for (i = 0; i < 25; i++)
+            {
+                if (temp->name[i] == '\n')
+                {
+                    temp->name[i] = ';';
+                }
+            }
+            for (i = 0; i < 80; i++)
+            {
+                if (temp->address[i] == '\n')
+                {
+                    temp->address[i] = ';';
+                }
+            }
+
+            fprintf(out_file, "%d\n", temp->accountno);
+            fprintf(out_file, "%s\n", temp->name);
+            fprintf(out_file, "%s\n", temp->address);
+        }
+    }
+
+    fclose(out_file);
+    
     return success;
 }
 
@@ -165,7 +207,7 @@ int strToInt(char user_input[], int length)
                 size_user_input++;
             }
         }
-        for (i = (size_user_input - 1); i < length; i++)
+        for (i = (size_user_input); i < length; i++)
         {
             user_input[i] = '\0';
         }
@@ -209,30 +251,4 @@ int strToInt(char user_input[], int length)
     while(bad_input == 1);
 
     return(valid_int);
-}
-
-/******************************************************************************
-//
-//  FUNCTION NAME: exponent
-//
-//  DESCRIPTION:   exponent function returns the int of the base raised to the
-//                 exp specified by the call.
-//
-//  PARAMETERS:    base : The radix of the number system
-//                 exp  : The distance from the radix point
-//
-//  RETURN VALUES: int  : The result of the math.
-//
-******************************************************************************/
-
-int exponent(int base, int exp)
-{
-    int i;
-    int number =1;
-
-    for (i = 0; i < exp; ++i)
-    {
-        number *= base;
-    }
-    return(number);
 }

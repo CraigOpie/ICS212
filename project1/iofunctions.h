@@ -19,7 +19,11 @@
 #ifndef _iofunctions_h
 #define _iofunctions_h
 #include "record.h"
+#include "database.h"
+#include "user_interface.h"
 
 int readfile( struct record ** accarray, char filename[] );
+int writefile( struct record * accarray, char filename[] );
+int strToInt(char user_input[], int length);
 
 #endif
