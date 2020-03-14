@@ -49,13 +49,14 @@ int main(int argc, char* argv[])
     }
     if (argc == 1 || (argc == 2 && debugMode == 0))
     {
-        readfile(&start, "/home/pi/git/ICS212/project1/test.txt");
+        readfile(&start, "/home/pi/git/ICS212/project1/.database");
         introMessage();
         while(loop == 0)
         {
             loop = menu(&start);
         }
-        writefile(start, "/home/pi/git/ICS212/project1/outfile.txt");
+        writefile(start, "/home/pi/git/ICS212/project1/.database");
+        cleanup(&start);
     }
     if ((argc > 1 && debugMode > 0) || argc > 2)
     {

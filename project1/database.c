@@ -303,3 +303,78 @@ int deleteRecord(struct record ** entry, int accNum)
     
     return deleted;
 }
+
+/******************************************************************************
+//
+//  FUNCTION NAME: cleanup
+//
+//  DESCRIPTION:   cleanup function removes all entries.
+//
+//  PARAMETERS:    entry     : Pointer the pointers address of the entry.
+//
+//  RETURN VALUES: 0 : Success.
+//
+******************************************************************************/
+
+int cleanup(struct record ** entry)
+{
+    struct record * temp = *entry;
+    struct record * last = *entry;
+    int deleted = -1;
+
+    if (debugMode == 0)
+    {
+        printf("\n\nFUNCTION NAME: cleanup\n");
+    }
+
+    if (temp == NULL)
+    {
+        printf("\nThe database is empty.\n");
+        deleted = 0;
+    }
+    else
+    {
+        while(temp->next != NULL)
+        {
+            if (temp == *entry)
+            {
+                *entry = temp->next;
+                temp = NULL;
+                free(temp);
+                temp = *entry;
+                deleted = 0;
+            }
+            else
+            {
+                last->next = temp->next;
+                temp = NULL;
+                free(temp);
+                temp = last->next;
+                deleted = 0;
+            }
+
+            if(temp->next != NULL)
+            {
+                last = temp;
+                temp = temp->next;
+            }
+        }
+
+        if (temp == *entry)
+        {
+            temp = NULL;
+            free(temp);
+            *entry = NULL;
+            deleted = 0;
+        }
+        else
+        {
+            temp = NULL;
+            free(temp);
+            last->next = NULL;
+            deleted = 0;
+        }
+    }
+    
+    return deleted;
+}

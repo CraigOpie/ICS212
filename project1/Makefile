@@ -11,4 +11,4 @@ database.o: database.c database.h
 ready:
 		touch main.c user_interface.c database.c iofunctions.c
 clean:
-		rm -f *.o project1 proof.txt output.txt outfile.txt
+		rm -f *.o project1 proof.txt .database

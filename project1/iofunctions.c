@@ -43,7 +43,7 @@ int readfile( struct record ** accarray, char filename[] )
     int success = 0;
     char parsed[3][80];
 
-    in_file = fopen(filename, "r");
+    in_file = fopen(filename, "a+");
 
     if (in_file == NULL)
     {
@@ -115,8 +115,6 @@ int writefile( struct record * accarray, char filename[] )
     int success = 0;
 
     out_file = fopen(filename, "w");
-
-    printf("This works");
 
     if (accarray != NULL)
     {
