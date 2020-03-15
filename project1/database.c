@@ -163,7 +163,6 @@ void printAllRecords(struct record * recordSet)
             temp = temp->next;
         }
 
-            printf("Back to the main menu");
         printf("\nAccount Number: %d\n", temp->accountno);
         printf("Name: %s\n", temp->name);
         printf("Address: %s\n", temp->address);
