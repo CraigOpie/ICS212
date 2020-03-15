@@ -2,7 +2,7 @@
 //
 //  NAME:          Craig Opie
 //
-//  HOMEWORK:      3b
+//  HOMEWORK:      project1
 //
 //  CLASS:         ICS 212
 //

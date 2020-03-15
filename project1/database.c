@@ -2,7 +2,7 @@
 //
 //  NAME:          Craig Opie
 //
-//  HOMEWORK:      3b
+//  HOMEWORK:      project1
 //
 //  CLASS:         ICS 212
 //
@@ -163,6 +163,7 @@ void printAllRecords(struct record * recordSet)
             temp = temp->next;
         }
 
+            printf("Back to the main menu");
         printf("\nAccount Number: %d\n", temp->accountno);
         printf("Name: %s\n", temp->name);
         printf("Address: %s\n", temp->address);
