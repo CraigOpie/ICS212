@@ -1,5 +1,5 @@
 project: main.o user_interface.o database.o iofunctions.o
-		gcc -o project1 main.o user_interface.o database.o iofunctions.o
+		gcc -o project main.o user_interface.o database.o iofunctions.o
 main.o: main.c
 		gcc -ansi -pedantic-errors -Wall -c main.c
 iofunctions.o: iofunctions.c iofunctions.h
