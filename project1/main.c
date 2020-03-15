@@ -41,6 +41,7 @@ void manFile();
 int main(int argc, char* argv[])
 {
     struct record * start = NULL;
+    int success = 0;
     int loop = 0;
 
     if (argc == 2)
@@ -49,14 +50,19 @@ int main(int argc, char* argv[])
     }
     if (argc == 1 || (argc == 2 && debugMode == 0))
     {
-        readfile(&start, "database.txt");
+        success = readfile(&start, "database.txt");
         introMessage();
         while(loop == 0)
         {
             loop = menu(&start);
         }
-        writefile(start, "database.txt");
+        success = writefile(start, "database.txt");
         cleanup(&start);
+
+        if (success == -1)
+        {
+            printf("ERROR: File could not be opened.");
+        }
     }
     if ((argc > 1 && debugMode > 0) || argc > 2)
     {
