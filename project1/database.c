@@ -39,7 +39,7 @@
 int addRecord(struct record ** entry, int accNum, char * name, char * address)
 {
     struct record * temp = *entry;
-    int wrote = -1;
+    int wrote = 2;
 
     if (debugMode == 0)
     {
@@ -90,7 +90,7 @@ int addRecord(struct record ** entry, int accNum, char * name, char * address)
 int printRecord(struct record * recordSet, int accNum)
 {
     struct record * temp = recordSet;
-    int printed = -1;
+    int printed = 2;
 
     if (debugMode == 0)
     {
@@ -187,7 +187,7 @@ void printAllRecords(struct record * recordSet)
 int modifyRecord(struct record * recordSet, int accNum, char * address)
 {
     struct record * temp = recordSet;
-    int modified = -1;
+    int modified = 2;
 
     if (debugMode == 0)
     {
@@ -239,7 +239,7 @@ int deleteRecord(struct record ** entry, int accNum)
 {
     struct record * temp = *entry;
     struct record * last = *entry;
-    int deleted = -1;
+    int deleted = 2;
 
     if (debugMode == 0)
     {
@@ -250,7 +250,6 @@ int deleteRecord(struct record ** entry, int accNum)
     if (temp == NULL)
     {
         printf("\nThe database is empty.\n");
-        deleted = 0;
     }
     else
     {

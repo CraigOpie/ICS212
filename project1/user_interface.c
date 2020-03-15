@@ -74,7 +74,7 @@ int menu(struct record ** dataBase)
         printf("\n\nFUNCTION NAME: menu\n");
     }
 
-    printf("\nPlease choose a menu option by typing the corresponding number ");
+    printf("\nPlease choose a menu option by typing the corresponding number\n");
     printf("and pressing enter.\n");
     printf("1: Add a new record.\n");
     printf("2: Print a record.\n");
@@ -127,14 +127,34 @@ int callMenuItem(struct record ** dataBase, int choice)
     switch(choice)
     {
         case 1: result = userAddRecord(dataBase);
+                if(result == 2)
+                {
+                    printf("Record not able to be created.\n");
+                }
+                result = 0;
                 break;
         case 2: result = userPrintRecord(*dataBase);
+                if(result == 2)
+                {
+                    printf("Record not found and not printed.\n");
+                }
+                result = 0;
                 break;
         case 3: printAllRecords(*dataBase);
                 break;
         case 4: result = userModifyRecord(*dataBase);
+                if(result == 2)
+                {
+                    printf("Record not found and not modified.\n");
+                }
+                result = 0;
                 break;
         case 5: result = userDeleteRecord(dataBase);
+                if(result == 2)
+                {
+                    printf("Record not found and not deleted.\n");
+                }
+                result = 0;
                 break;
         case 6: result = 1;
                 break;
@@ -161,6 +181,7 @@ int callMenuItem(struct record ** dataBase, int choice)
 int userAddRecord(struct record ** dataBase)
 {
     int accNum = 0;
+    int success = 0;
     char name[25];
     char address[80];
 
@@ -175,9 +196,9 @@ int userAddRecord(struct record ** dataBase)
     getName(name, 25);
     printf("Please enter the address (press Enter twice to exit):\n");
     getAddress(address, 80);
-    addRecord(dataBase, accNum, name, address);
+    success = addRecord(dataBase, accNum, name, address);
 
-    return 0;
+    return success;
 }
 
 /******************************************************************************
@@ -196,6 +217,7 @@ int userAddRecord(struct record ** dataBase)
 int userPrintRecord(struct record * dataBase)
 {
     int accNum = 0;
+    int success = 0;
     
     if (debugMode == 0)
     {
@@ -204,9 +226,9 @@ int userPrintRecord(struct record * dataBase)
     
     printf("Please enter the account number:\n");
     accNum = getIntFromUser();
-    printRecord(dataBase, accNum);
+    success = printRecord(dataBase, accNum);
 
-    return 0;
+    return success;
 }
 
 /******************************************************************************
@@ -225,6 +247,7 @@ int userPrintRecord(struct record * dataBase)
 int userModifyRecord(struct record * dataBase)
 {
     int accNum = 0;
+    int success = 0;
     char address[80];
 
     if (debugMode == 0)
@@ -236,9 +259,9 @@ int userModifyRecord(struct record * dataBase)
     accNum = getIntFromUser();
     printf("\nPlease enter the address (press Enter twice to exit):\n");
     getAddress(address, 80);
-    modifyRecord(dataBase, accNum, address);
+    success = modifyRecord(dataBase, accNum, address);
 
-    return 0;
+    return success;
 }
 
 /******************************************************************************
@@ -257,6 +280,7 @@ int userModifyRecord(struct record * dataBase)
 int userDeleteRecord(struct record ** dataBase)
 {
     int accNum = 0;
+    int success = 0;
     
     if (debugMode == 0)
     {
@@ -265,9 +289,9 @@ int userDeleteRecord(struct record ** dataBase)
     
     printf("Please enter the account number:\n");
     accNum = getIntFromUser();
-    deleteRecord(dataBase, accNum);
+    success = deleteRecord(dataBase, accNum);
 
-    return 0;
+    return success;
 }
 
 /******************************************************************************
