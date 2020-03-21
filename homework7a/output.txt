@@ -1,0 +1,18 @@
+Script started on Sat 21 Mar 2020 12:18:49 PM HST
+]0;opieca@uhx02:~/ICS212/homework7a[?1034huhx02:/home/o/opieca/ICS212/homework7a% ./homework7a 
+Total distance:  13.00
+Total cost:     $4000.00
+]0;opieca@uhx02:~/ICS212/homework7auhx02:/home/o/opieca/ICS212/homework7a% ./homework7a 2
+Total distance:  2.00
+Total cost:     $600.00
+]0;opieca@uhx02:~/ICS212/homework7auhx02:/home/o/opieca/ICS212/homework7a% ./homework7a 2[Kd
+Not a valid integer.  Defaulting to 13 miles.
+Total distance:  13.00
+Total cost:     $4000.00
+]0;opieca@uhx02:~/ICS212/homework7auhx02:/home/o/opieca/ICS212/homework7a% ./homework7a d[K55
+Total distance:  55.00
+Total cost:     $17200.00
+]0;opieca@uhx02:~/ICS212/homework7auhx02:/home/o/opieca/ICS212/homework7a% exit
+exit
+
+Script done on Sat 21 Mar 2020 12:19:32 PM HST

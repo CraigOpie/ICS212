@@ -424,7 +424,7 @@ void getName(char * text, int size)
         if (text[i] == '\n' && text[i-1] == '\n')
         {
             text[i-1] = '\0';
-            for (i = i; i < size; i++)
+            for (; i < size; i++)
             {
                 text[i] = '\0';
             }
@@ -465,7 +465,7 @@ void getAddress(char * text, int size)
         if (text[i] == '\n' && text[i-1] == '\n')
         {
             text[i-1] = '\0';
-            for (i = i; i < size; i++)
+            for (; i < size; i++)
             {
                 text[i] = '\0';
             }
@@ -505,3 +505,4 @@ int exponent(int base, int exp)
     }
     return(number);
 }
+

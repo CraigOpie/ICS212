@@ -98,3 +98,4 @@ void manFile()
     printf("OPTIONS\n\tdebug\n\t\tEnters debug mode and provides amplifying");
     printf("\n\t\tinformation about each function that is operating.\n\n");
 }
+

@@ -250,3 +250,4 @@ int strToInt(char user_input[], int length)
 
     return(valid_int);
 }
+

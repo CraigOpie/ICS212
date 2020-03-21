@@ -1,0 +1,10 @@
+Script started on Sat 21 Mar 2020 12:18:25 PM HST
+]0;opieca@uhx02:~/ICS212/homework7a[?1034huhx02:/home/o/opieca/ICS212/homework7a% make
+gcc -ansi -pedantic-errors -Wall -c driver.c
+gcc -ansi -pedantic-errors -Wall -c iofunctions.c
+gcc -ansi -pedantic-errors -Wall -c paint.c
+gcc -o homework7a driver.o iofunctions.o paint.o
+]0;opieca@uhx02:~/ICS212/homework7auhx02:/home/o/opieca/ICS212/homework7a% exit
+exit
+
+Script done on Sat 21 Mar 2020 12:18:31 PM HST
