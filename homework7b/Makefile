@@ -5,4 +5,4 @@ homework7b.o: homework7b.c
 ready:
 		touch homework7b.c
 clean:
-		rm -f homework7b.o homework7b result* *.txt
+		rm -f homework7b.o homework7b result* *.txt *.zip

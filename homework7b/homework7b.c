@@ -30,7 +30,8 @@ int writefile(unsigned char [], int, char []);
 //
 //  DESCRIPTION:    Main function modifies color tables for gif files.
 //
-//  PARAMETERS:     None.
+//  PARAMETERS:     argv[1] - filename to read.
+//                  argv[2] - filename to write.
 //
 //  RETURN VALUES:  0 : Success.
 //
@@ -48,6 +49,7 @@ int main(int argc, char* argv[])
     {
         strcpy(infile, "image1.gif");
         strcpy(outfile, "result1.gif");
+        printf("Default filenames were used: 'image1.gif' & 'result1.gif'\n");
     }
     else
     {
@@ -85,7 +87,7 @@ int main(int argc, char* argv[])
 //  DESCRIPTION:    printinfor function informs the user about the gif file's
 //                  width, height, and color.
 //
-//  PARAMETERS:     None.
+//  PARAMETERS:     data[] - array of binary data.
 //
 //  RETURN VALUES:  None.
 //
@@ -123,7 +125,7 @@ void printinfor(unsigned char data[])
 //
 //  DESCRIPTION:    modify function modifies the gif color pallette.
 //
-//  PARAMETERS:     None.
+//  PARAMETERS:     data[] - array of binary data.
 //
 //  RETURN VALUES:  None.
 //
@@ -180,9 +182,13 @@ void modify(unsigned char data[])
 //
 //  DESCRIPTION:    readfile function reads the binary file into the array.
 //
-//  PARAMETERS:     None.
+//  PARAMETERS:     data[]     - array of binary data.
+//                  *data_size - location to store the number of bytes in the
+//                               binary file being read.
+//                  filename[] - filename of the file to be read.
 //
-//  RETURN VALUES:  None.
+//  RETURN VALUES:  0 : success.
+//                  -1: failure.
 //
 ******************************************************************************/
 
@@ -219,9 +225,13 @@ int readfile(unsigned char data[], int * data_size, char filename[])
 //
 //  DESCRIPTION:    writefile function writes the array into a binary file.
 //
-//  PARAMETERS:     None.
+//  PARAMETERS:     data[]     - array of binary data.
+//                  data_size  - number of bytes in the binary file being
+//                               written.
+//                  filename[] - filename of the file to be written.
 //
-//  RETURN VALUES:  None.
+//  RETURN VALUES:  0 : success.
+//                  -1: failure.
 //
 ******************************************************************************/
 
