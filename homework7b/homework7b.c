@@ -109,12 +109,12 @@ void printinfor(unsigned char data[])
 
 
     printf("Width:  %d\n", width);
-    printf("Height: %d\n\n", height);
+    printf("Height: %d\n", height);
     printf("Color 1, 2, 3, and 4:\n");
     printf("R value: %06x\n", red);
     printf("G value: %06x\n", green);
     printf("B value: %06x\n", blue);
-    printf("A value: %06x\n", alpha);
+    printf("A value: %06x\n\n", alpha);
 }
 
 /******************************************************************************
