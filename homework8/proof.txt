@@ -1,0 +1,7 @@
+Script started on Tue 31 Mar 2020 12:35:58 AM HST
+]0;opieca@uhx02:~/ICS212/homework8[?1034huhx02:/home/o/opieca/ICS212/homework8% g++ -ansi -pedantic-errors -Wall -c homework8.cpp
+]0;opieca@uhx02:~/ICS212/homework8uhx02:/home/o/opieca/ICS212/homework8% g++ -o homework8 homework8.o
+]0;opieca@uhx02:~/ICS212/homework8uhx02:/home/o/opieca/ICS212/homework8% exit
+exit
+
+Script done on Tue 31 Mar 2020 12:36:21 AM HST
