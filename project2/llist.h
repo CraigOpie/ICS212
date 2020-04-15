@@ -19,7 +19,15 @@
 #ifndef _llist_h
 #define _llist_h
 
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <cstring>
+#include <string>
+#include "llist.h"
 #include "record.h"
+using namespace std;
 
 /* creates a class used capsulate the 'database' */
 class llist
