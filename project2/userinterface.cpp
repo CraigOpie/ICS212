@@ -86,11 +86,11 @@ int main(int argc, char *argv [])
         // informs the user about the program's purpose and displays a welcome
         cout << "This program allows a banker to create, modify, view, \n"
             "and delete information about clients.\n     " << endl;
-        cout << "========================================"
+        cout << "========================================="
                 "========================================" << endl;
-        cout << "Welcome to the 'School of Hard Knocks' Student Banking "
+        cout << "  Welcome to the 'School of Hard Knocks' Student Banking "
                 "and Transaction System" << endl;
-        cout << "========================================"
+        cout << "========================================="
                 "========================================" << endl;
         // loop through the application until the user quits or an error occurs
         while(result == 0)
@@ -150,7 +150,6 @@ int menu(llist &dataBase)
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: menu" << endl;
-        // cout << "dataBase: " << dataBase << endl;
     #endif
     int choice;
     int result = 0;
@@ -180,7 +179,7 @@ int menu(llist &dataBase)
                 break;
         case 2: result = userPrintRecord(dataBase);
                 break;
-        case 3: // cout << (*(dataBase)) << endl;
+        case 3: cout << (dataBase);
                 break;
         case 4: result = userModifyRecord(dataBase);
                 break;
@@ -214,12 +213,11 @@ int userAddRecord(llist &dataBase)
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: userAddRecord" << endl;
-        // cout << "dataBase: " << dataBase << endl;
     #endif
     int accNum;
     int success;
-    char name[25];
-    char address[80];
+    char name[25] = "";
+    char address[80] = "";
 
     accNum = getAccNo();
     getName(name);
@@ -246,7 +244,6 @@ int userPrintRecord(llist &dataBase)
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: userAddRecord" << endl;
-        // cout << "dataBase: " << dataBase << endl;
     #endif
     int accNum;
     int success;
@@ -274,11 +271,10 @@ int userModifyRecord(llist &dataBase)
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: userModifyRecord" << endl;
-        // cout << "dataBase: " << dataBase << endl;
     #endif
     int accNum;
     int success;
-    char address[80];
+    char address[80] = "";
 
     accNum = getAccNo();
     getAddress(address);
@@ -304,7 +300,6 @@ int userDeleteRecord(llist &dataBase)
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: userDeleteRecord" << endl;
-        // cout << "dataBase: " << dataBase << endl;
     #endif
     int accNum;
     int success;
@@ -344,6 +339,8 @@ int getAccNo()
         cin.ignore(999, '\n');
         cout << "Please enter the account number: ";
     }
+    cin.clear();
+    cin.ignore(999, '\n');
 
     return userInt;
 }

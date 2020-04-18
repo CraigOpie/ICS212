@@ -32,7 +32,7 @@
 //
 //  PARAMETERS:     None
 //
-//  RETURNVALUES:   0 : success
+//  RETURNVALUES:   0   : Success
 //
 ******************************************************************/
 
@@ -42,29 +42,23 @@ int llist::readfile()
         cout << "FUNCTION NAME: llist::readfile" << endl;
     #endif
 
-    FILE * inFile;
+    fstream inFile;
     int accNum;
     int row = 0;
     int col = 0;
-    int loop = 1;
     int success = 0;
-    char c;
+    char c = '\0';
     char parsed[3][80];
 
-    inFile = fopen(filename, "a+");
+    inFile.open(this->filename);
 
-    if(!inFile)
+    if(!inFile.fail())
     {
-        cerr << "Unable to open file " << filename << endl;
-        exit(-1);
-    }
-    else
-    {
-        while(c != EOF)
+        while(!inFile.eof())
         {
-            c = getc(inFile);
+            inFile.get(c);
             parsed[row][col] = c;
-            if(c == '\n' || c == EOF)
+            if(c == '\n')
             {
                 parsed[row][col] = '\0';
                 row++;
@@ -80,7 +74,7 @@ int llist::readfile()
             {
                 stringstream temp(parsed[0]);
                 temp >> accNum;
-                addRecord(accNum, parsed[1], parsed[2]);
+                this->addRecord(accNum, parsed[1], parsed[2]);
 
                 accNum = 0;
                 for(row = 0; row < 3; row++)
@@ -90,11 +84,17 @@ int llist::readfile()
                         parsed[row][col] = '\0';
                     }
                 }
+
+                row = 0;
+                col = 0;
             }
         }
+        inFile.close();
     }
-
-    fclose(inFile);
+    else
+    {
+        success = -1;
+    }
 
     return success;
 }
@@ -107,7 +107,7 @@ int llist::readfile()
 //
 //  PARAMETERS:     None
 //
-//  RETURNVALUES:   0 : success
+//  RETURNVALUES:   0   : Success
 //
 ******************************************************************************/
 
@@ -117,44 +117,16 @@ int llist::writefile()
         cout << "FUNCTION NAME: llist::writefile" << endl;
     #endif
 
-    FILE * outFile;
-    record * temp = (this -> start);
+    ofstream outFile(this->filename);
+    record * temp = NULL;
     int i;
     int success = 0;
 
-    outFile = fopen(filename, "w");
-
-    if (temp != NULL)
+    if(!outFile.fail())
     {
-        if (outFile == NULL)
+        temp = (this->start);
+        while (temp != NULL)
         {
-            success = -1;
-        }
-        else
-        {
-            while (temp->next != NULL)
-            {
-                for (i = 0; i < 25; i++)
-                {
-                    if (temp->name[i] == '\n')
-                    {
-                        temp->name[i] = ';';
-                    }
-                }
-                for (i = 0; i < 80; i++)
-                {
-                    if (temp->address[i] == '\n')
-                    {
-                        temp->address[i] = ';';
-                    }
-                }
-
-                fprintf(outFile, "%d\n", temp->accountno);
-                fprintf(outFile, "%s\n", temp->name);
-                fprintf(outFile, "%s\n", temp->address);
-                temp = temp->next;
-            }
-            
             for (i = 0; i < 25; i++)
             {
                 if (temp->name[i] == '\n')
@@ -169,17 +141,14 @@ int llist::writefile()
                     temp->address[i] = ';';
                 }
             }
+            outFile << temp->accountno << endl;
+            outFile << temp->name << endl;
+            outFile << temp->address << endl;
 
-            fprintf(outFile, "%d\n", temp->accountno);
-            fprintf(outFile, "%s\n", temp->name);
-            fprintf(outFile, "%s\n", temp->address);
+            temp = temp->next;
         }
     }
-
-    fclose(outFile);
-    
     return success;
-
 }
 
 /******************************************************************************
@@ -190,7 +159,7 @@ int llist::writefile()
 //
 //  PARAMETERS:     recordFwd : Pointer to the record to be reversed.
 //
-//  RETURNVALUES:   0 : success
+//  RETURNVALUES:   0   : Success
 //
 ******************************************************************************/
 
@@ -198,14 +167,13 @@ record * llist::reverse(record * recordFwd)
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: llist::record * reverse" << endl;
-        cout << "recordFwd: " << recordFwd << endl;
     #endif
 
     record * temp;
     bool done = false;
 
     // Returns list as is if there is nothing to reverse
-    if(recordFwd == NULL || (recordFwd -> next) == NULL)
+    if(recordFwd == NULL || (recordFwd->next) == NULL)
     {
         temp = recordFwd;
         done = true;
@@ -214,9 +182,9 @@ record * llist::reverse(record * recordFwd)
     // Reverses the list and returns temp
     if(!done)
     {
-        temp = reverse(recordFwd -> next);
-        ((recordFwd -> next) -> next) = recordFwd;
-        (recordFwd -> next) = NULL;
+        temp = this->reverse(recordFwd->next);
+        ((recordFwd->next)->next) = recordFwd;
+        (recordFwd->next) = NULL;
     }
     
     return temp;
@@ -232,7 +200,7 @@ record * llist::reverse(record * recordFwd)
 //
 //  PARAMETERS:     None
 //
-//  RETURNVALUES:   0 : success
+//  RETURNVALUES:   0   : Success
 //
 ******************************************************************************/
 
@@ -243,14 +211,14 @@ void llist::cleanup()
     #endif
 
     record * temp;
-    while((this -> start) != NULL) 
+    while((this->start) != NULL) 
     {
-        temp = (this -> start);
-        (this -> start) = ((this -> start) -> next);
+        temp = (this->start);
+        (this->start) = ((this->start)->next);
         delete(temp);
         temp = NULL;
     }
-    (this -> start) = NULL;
+    (this->start) = NULL;
 }
     
 /******************************************************************************
@@ -262,7 +230,7 @@ void llist::cleanup()
 //
 //  PARAMETERS:     None
 //
-//  RETURNVALUES:   0 : success
+//  RETURNVALUES:   0   : Success
 //
 ******************************************************************************/
 
@@ -272,9 +240,9 @@ llist::llist()
         cout << "FUNCTION NAME: llist::llist" << endl;
     #endif
 
-    (this -> start) = NULL;
+    (this->start) = NULL;
     strcpy(filename, "database.txt");
-    readfile();
+    this->readfile();
     
 }
 
@@ -287,7 +255,7 @@ llist::llist()
 //
 //  PARAMETERS:     inFile : User specified filename for the database file.
 //
-//  RETURNVALUES:   0 : success
+//  RETURNVALUES:   0   : Success
 //
 ******************************************************************************/
 
@@ -295,12 +263,35 @@ llist::llist(char inFile[])
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: llist::llist" << endl;
-        // cout << "char[]: " << char[] << endl;
+        cout << "char[]: " << inFile << endl;
     #endif
 
-    (this -> start) = NULL;
+    (this->start) = NULL;
     strcpy(filename, inFile);
-    readfile();
+    this->readfile();
+
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   llist
+//
+//  DESCRIPTION:    A copy constructor used to set the llist to the same values
+//                  as the passed objects llist.
+//
+//  PARAMETERS:     obj : Object to copy.
+//
+//  RETURNVALUES:   0   : Success
+//
+******************************************************************************/
+
+llist::llist(llist const & obj)
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::llist" << endl;
+    #endif
+
+    (this->start) = obj.start;
 
 }
 
@@ -313,7 +304,7 @@ llist::llist(char inFile[])
 //
 //  PARAMETERS:     None
 //
-//  RETURNVALUES:   0 : success
+//  RETURNVALUES:   0   : Success
 //
 ******************************************************************************/
 
@@ -323,8 +314,8 @@ llist::~llist()
         cout << "FUNCTION NAME: llist::~llist" << endl;
     #endif
 
-    writefile();
-    cleanup();
+    this->writefile();
+    this->cleanup();
 
 }
 
@@ -338,7 +329,7 @@ llist::~llist()
 //                  name      : Pointer to the entry name.
 //                  address   : Pointer to the entry address.
 //
-//  RETURNVALUES:   0 : Success.
+//  RETURNVALUES:   0   : Success.
 //
 ******************************************************************************/
 
@@ -347,21 +338,32 @@ int llist::addRecord(int accNum, char name[25],char address[80])
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: llist::addRecord" << endl;
         cout << "accNum: " << accNum << endl;
-        // cout << "name[25]: " << name[] << endl;
-        // cout << "address[80]: " << address[] << endl;
+        cout << "name[25]: " << name << endl;
+        cout << "address[80]: " << address << endl;
     #endif
 
     record * temp = NULL;
 
-    temp = (this -> start);
-    while(temp != NULL)
+    temp = (this->start);
+    if(temp == NULL)
     {
-        temp = temp -> next;
+        this->start = new record;
+        (this->start)->accountno = accNum;
+        strcpy((this->start)->name, name);
+        strcpy((this->start)->address, address);
     }
-    temp = new record;
-    temp -> accountno = accNum;
-    strcpy(temp -> name, name);
-    strcpy(temp -> address, address);
+    else
+    {
+        while(temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+        temp->next = new record;
+        temp = temp->next;
+        temp->accountno = accNum;
+        strcpy(temp->name, name);
+        strcpy(temp->address, address);
+    }
 
     return 0;
 }
@@ -374,7 +376,7 @@ int llist::addRecord(int accNum, char name[25],char address[80])
 //
 //  PARAMETERS:     accNum  : Account number for the entry.
 //
-//  RETURNVALUES:   0 : Success.
+//  RETURNVALUES:   0   : Success.
 //
 ******************************************************************************/
 
@@ -387,22 +389,53 @@ int llist::printRecord(int accNum)
 
     record * temp = NULL;
 
-    temp = (this -> start);
+    temp = (this->start);
     while (temp != NULL)
     {
-        if(temp -> accountno == accNum)
+        if(temp->accountno == accNum)
         {
-            cout << temp -> accountno << endl;
-            cout << temp -> name << endl;
-            cout << temp -> address << endl;
+            cout << temp->accountno << endl;
+            cout << temp->name << endl;
+            cout << temp->address << endl;
         }
-        temp = temp -> next;
+        temp = temp->next;
     }
 
     return 0;
 }
 
-// replace printAllRecords() with the << operator
+/******************************************************************************
+//
+//  OPERATORNAME:   <<
+//
+//  DESCRIPTION:    << prints all records in the llist.
+//
+//  PARAMETERS:     myCout  : Reference to ostream cout.
+//                  obj     : Reference to the llist object to print.
+//
+//  RETURNVALUES:   myCout  : All records in an ostream.
+//
+******************************************************************************/
+
+ostream & operator << (ostream & myCout, const llist & obj)
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::operator <<" << endl;
+    #endif
+
+    record * temp = NULL;
+
+    temp = (obj.start);
+    while(temp != NULL)
+    {
+        myCout << temp->accountno << endl;
+        myCout << temp->name << endl;
+        myCout << temp->address << endl;
+        myCout << endl;
+        temp = temp->next;
+    }
+    return myCout;
+}
 
 /******************************************************************************
 //
@@ -413,7 +446,7 @@ int llist::printRecord(int accNum)
 //  PARAMETERS:     accNum  : Account number for the entry.
 //                  address : Pointer to the entry address.
 //
-//  RETURNVALUES:   0 : Success.
+//  RETURNVALUES:   0   : Success.
 //
 ******************************************************************************/
 
@@ -422,19 +455,19 @@ int llist::modifyRecord(int accNum, char address[80])
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: llist::modifyRecord" << endl;
         cout << "accNum: " << accNum << endl;
-        // cout << "address[80]: " << address[] << endl;
+        cout << "address[80]: " << address << endl;
     #endif
 
     record * temp = NULL;
 
-    temp = (this -> start);
+    temp = (this->start);
     while (temp != NULL)
     {
-        if(temp -> accountno == accNum)
+        if(temp->accountno == accNum)
         {
-            strcpy(temp -> address, address);
+            strcpy(temp->address, address);
         }
-        temp = temp -> next;
+        temp = temp->next;
     }
 
     return 0;
@@ -448,7 +481,7 @@ int llist::modifyRecord(int accNum, char address[80])
 //
 //  PARAMETERS:     accNum  : Account number for the entry.
 //
-//  RETURNVALUES:   0 : Success.
+//  RETURNVALUES:   0   : Success.
 //
 ******************************************************************************/
 
@@ -462,30 +495,30 @@ int llist::deleteRecord(int accNum)
     record * temp = NULL;
     record * previous = NULL;
 
-    temp = (this -> start);
+    temp = (this->start);
     while (temp != NULL)
     {
-        if((temp -> accountno) == accNum)
+        if((temp->accountno) == accNum)
         {
-            if(temp == (this -> start))
+            if(temp == (this->start))
             {
-                previous = (this -> start);
-                start = ((this -> start) -> next);
-                temp = (this -> start);
+                previous = (this->start);
+                start = ((this->start)->next);
+                temp = (this->start);
                 delete(previous);
                 previous = NULL;
             }
             else
             {
-                previous -> next = temp -> next;
+                previous->next = temp->next;
                 delete(temp);
-                temp = previous -> next;
+                temp = previous->next;
             }
         }
         else
         {
             previous = temp;
-            temp = temp -> next;
+            temp = temp->next;
         }
     }
 
@@ -501,7 +534,7 @@ int llist::deleteRecord(int accNum)
 //
 //  PARAMETERS:     None
 //
-//  RETURNVALUES:   0 : Success.
+//  RETURNVALUES:   0   : Success.
 //
 ******************************************************************************/
 
@@ -511,7 +544,5 @@ void llist::reverse()
         cout << "FUNCTION NAME: llist::reverse" << endl;
     #endif
 
-    record * temp;
-
-    temp = reverse(this -> start);
+    this->start = this->reverse(this->start);
 }

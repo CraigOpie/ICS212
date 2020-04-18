@@ -37,11 +37,12 @@ private:
 public:
     llist();
     llist(char[]);
+    llist(const llist &);
     ~llist();
-    int addRecord(int, char [ ],char [ ]);
+    int addRecord(int, char [],char []);
     int printRecord(int);
-    // replace printAllRecords() with the << operator
-    int modifyRecord(int, char [ ]);
+    friend ostream & operator << (ostream &, const llist &);
+    int modifyRecord(int, char []);
     int deleteRecord(int);
     void reverse();
 };
