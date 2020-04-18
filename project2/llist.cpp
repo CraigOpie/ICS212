@@ -23,7 +23,6 @@
 #include <cstring>
 #include <string>
 #include "llist.h"
-using namespace std;
 
 /******************************************************************
 //
@@ -44,11 +43,12 @@ int llist::readfile()
     #endif
 
     FILE * inFile;
-    int i;
-    int j;
     int accNum;
+    int row = 0;
+    int col = 0;
     int loop = 1;
     int success = 0;
+    char c;
     char parsed[3][80];
 
     inFile = fopen(filename, "a+");
@@ -58,45 +58,42 @@ int llist::readfile()
         cerr << "Unable to open file " << filename << endl;
         exit(-1);
     }
-
-    while(loop)
+    else
     {
-        for(i = 0; i < 3; i++)
+        while(c != EOF)
         {
-            if(fgets(parsed[i], 80, inFile) != NULL)
+            c = getc(inFile);
+            parsed[row][col] = c;
+            if(c == '\n' || c == EOF)
             {
-                for(j = 0; j < 80; j++)
-                {
-                    if(parsed[i][j] == '\n')
-                    {
-                        parsed[i][j] = '\0';
-                    }
-                    if(parsed[i][j] == ';')
-                    {
-                        parsed[i][j] = '\n';
-                    }
-                }
+                parsed[row][col] = '\0';
+                row++;
+                col = -1;
             }
-            else
+            if(c == ';')
             {
-                loop = 0;
+                parsed[row][col] = '\n';
             }
-        }
-        if(loop)
-        {
-            stringstream temp(parsed[0]);
-            temp >> accNum;
-            addRecord(accNum, parsed[1], parsed[2]);
+            col++;
 
-            for(i = 0; i < 3; i++)
+            if(row > 2)
             {
-                for(j = 0; j < 80; j++)
+                stringstream temp(parsed[0]);
+                temp >> accNum;
+                addRecord(accNum, parsed[1], parsed[2]);
+
+                accNum = 0;
+                for(row = 0; row < 3; row++)
                 {
-                    parsed[i][j] = '\0';
+                    for(col = 0; col < 80; col++)
+                    {
+                        parsed[row][col] = '\0';
+                    }
                 }
             }
         }
     }
+
     fclose(inFile);
 
     return success;
