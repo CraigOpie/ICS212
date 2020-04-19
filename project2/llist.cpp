@@ -373,6 +373,7 @@ int llist::addRecord(int accNum, char name[25],char address[80])
         (this->start)->accountno = accNum;
         strcpy((this->start)->name, name);
         strcpy((this->start)->address, address);
+        (this->start)->next = NULL;
         success = 0;
     }
     else
@@ -386,6 +387,7 @@ int llist::addRecord(int accNum, char name[25],char address[80])
         temp->accountno = accNum;
         strcpy(temp->name, name);
         strcpy(temp->address, address);
+        (this->start)->next = NULL;
         success = 0;
     }
 
@@ -413,10 +415,9 @@ int llist::printRecord(int accNum)
 
     record * temp = NULL;
     int success = 3;
-    bool loop = true;
 
     temp = this->start;
-    while(loop)
+    while (temp != NULL)
     {
         if(temp->accountno == accNum)
         {
@@ -425,15 +426,7 @@ int llist::printRecord(int accNum)
             cout << temp->address << endl;
             success = 0;
         }
-        if(temp->next != NULL)
-        {
-            temp = temp->next;
-        }
-        else
-        {
-            loop = false;
-        }
-        
+        temp = temp->next;
     }
 
     return success;
@@ -459,23 +452,15 @@ ostream & operator << (ostream &myCout, const llist &obj)
     #endif
 
     record * temp = NULL;
-    bool loop = true;
 
     temp = obj.start;
-    while(loop)
+    while(temp != NULL)
     {
         myCout << temp->accountno << endl;
         myCout << temp->name << endl;
         myCout << temp->address << endl;
         myCout << endl;
-        if(temp->next != NULL)
-        {
-            temp = temp->next;
-        }
-        else
-        {
-            loop = false;
-        }
+        temp = temp->next;
     }
     return myCout;
 }
