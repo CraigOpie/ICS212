@@ -1,371 +1,596 @@
 /*******************************************************************************
 //
-//  NAME:          Craig Opie
+//  NAME:           Craig Opie
 //
-//  HOMEWORK:      project1
+//  HOMEWORK:       project2
 //
-//  CLASS:         ICS 212
+//  CLASS:          ICS 212
 //
-//  INSTRUCTOR     Ravi Narayan
+//  INSTRUCTOR:     Ravi Narayan
 //
-//  DATE:          Feb 11, 2020
+//  DATE:           April 03, 2020
 //
-//  FILE:          database.c
+//  FILE:           llist.cpp
 //
-//  DESCRIPTION:   This file uses
-//
-******************************************************************************/
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "database.h"
-
-/******************************************************************************
-//
-//  FUNCTION NAME: addRecord
-//
-//  DESCRIPTION:   addRecord function creates a new record entry.
-//
-//  PARAMETERS:    entry     : Pointer the pointers address of the entry.
-//                 accNum    : Account number for the entry.
-//                 name      : Pointer to the entry name.
-//                 address   : Pointer to the entry address.
-//
-//  RETURN VALUES: 0 : Success.
+//  DESCRIPTION:    This file declares the struct used to store records.
 //
 ******************************************************************************/
 
-int addRecord(struct record ** entry, int accNum, char * name, char * address)
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <cstring>
+#include <string>
+#include "llist.h"
+
+/******************************************************************
+//
+//  FUNCTIONNAME:   readfile
+//
+//  DESCRIPTION:    A function used to read from files
+//
+//  PARAMETERS:     None
+//
+//  RETURNVALUES:   0   : Success
+//
+******************************************************************/
+
+int llist::readfile()
 {
-    struct record * temp = *entry;
-    int wrote = 2;
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::readfile" << endl;
+    #endif
 
-    if (debugMode == 0)
-    {
-        printf("\n\nFUNCTION NAME: addRecord\n");
-        printf("Account Number: %d\n", accNum);
-        printf("Name: %s\n", name);
-        printf("Address: %s\n", address);
-    }
+    fstream inFile;
+    int accNum;
+    int row = 0;
+    int col = 0;
+    int success = 0;
+    char c = '\0';
+    char parsed[3][80];
 
-    if (temp == NULL)
+    inFile.open(this->filename);
+
+    if(!inFile.fail())
     {
-        *entry = (struct record *) malloc(sizeof(struct record));
-        temp = *entry;
-        wrote = 0;
-    }
-    else
-    {
-        while(temp->next != NULL)
+        while(!inFile.eof())
         {
-            temp = temp->next;
-        }
-
-        temp->next = (struct record *) malloc(sizeof(struct record));
-        temp = temp->next;
-        wrote = 0;
-    }
-
-    temp->accountno = accNum;
-    strcpy(temp->name, name);
-    strcpy(temp->address, address);
-
-    return wrote;
-}
-
-/******************************************************************************
-//
-//  FUNCTION NAME: printRecord
-//
-//  DESCRIPTION:   printRecord function prints the specified record to screen.
-//
-//  PARAMETERS:    recordSet : Pointer to the address of the record struct.
-//                 accNum    : Account number for the entry.
-//
-//  RETURN VALUES: 0 : Success.
-//
-******************************************************************************/
-
-int printRecord(struct record * recordSet, int accNum)
-{
-    struct record * temp = recordSet;
-    int printed = 2;
-
-    if (debugMode == 0)
-    {
-        printf("\n\nFUNCTION NAME: printRecord\n");
-        printf("Account Number: %d\n", accNum);
-    }
-
-    if (temp == NULL)
-    {
-        printf("\nThe database is empty.\n");
-    }
-    else
-    {
-        while (temp->next != NULL)
-        {
-            if (temp->accountno == accNum)
+            inFile.get(c);
+            parsed[row][col] = c;
+            if(c == '\n')
             {
-                printf("\nAccount Number: %d\n", temp->accountno);
-                printf("Name: %s\n", temp->name);
-                printf("Address: %s\n", temp->address);
-                printed = 0;
+                parsed[row][col] = '\0';
+                row++;
+                col = -1;
             }
-            temp = temp->next;
-        }
-
-        if (temp->accountno == accNum)
-        {
-            printf("\nAccount Number: %d\n", temp->accountno);
-            printf("Name: %s\n", temp->name);
-            printf("Address: %s\n", temp->address);
-            printed = 0;
-        }
-    }
-
-    return printed;
-}
-
-/******************************************************************************
-//
-//  FUNCTION NAME: printAllRecords
-//
-//  DESCRIPTION:   printAllRecords function prints all records in the struct.
-//
-//  PARAMETERS:    recordSet : Pointer to the address of the record struct.
-//
-//  RETURN VALUES: None
-//
-******************************************************************************/
-
-void printAllRecords(struct record * recordSet)
-{
-    struct record * temp = recordSet;
-
-    if (debugMode == 0)
-    {
-        printf("\n\nFUNCTION NAME: printAllRecords\n");
-    }
-
-    if (temp == NULL)
-    {
-        printf("\nThe database is empty.\n");
-    }
-    else
-    {
-        while (temp->next != NULL)
-        {
-            printf("\nAccount Number: %d\n", temp->accountno);
-            printf("Name: %s\n", temp->name);
-            printf("Address: %s\n", temp->address);
-            temp = temp->next;
-        }
-
-        printf("\nAccount Number: %d\n", temp->accountno);
-        printf("Name: %s\n", temp->name);
-        printf("Address: %s\n", temp->address);
-    }
-}
-
-/******************************************************************************
-//
-//  FUNCTION NAME: modifyRecord
-//
-//  DESCRIPTION:   modifyRecord function changes the specified address.
-//
-//  PARAMETERS:    recordSet : Pointer to the address of the record struct.
-//                 accNum    : Account number for the entry.
-//                 address   : Pointer to the entry address.
-//
-//  RETURN VALUES: 0 : Success.
-//
-******************************************************************************/
-
-int modifyRecord(struct record * recordSet, int accNum, char * address)
-{
-    struct record * temp = recordSet;
-    int modified = 2;
-
-    if (debugMode == 0)
-    {
-        printf("\n\nFUNCTION NAME: modifyRecord\n");
-        printf("Account Number: %d\n", accNum);
-        printf("Address: %s\n", address);
-    }
-
-    if (temp == NULL)
-    {
-        printf("\nThe database is empty.\n");
-    }
-    else
-    {
-        while (temp->next != NULL)
-        {
-            if (temp->accountno == accNum)
+            if(c == ';')
             {
-                strcpy(temp->address, address);
-                modified = 0;
+                parsed[row][col] = '\n';
             }
-            temp = temp->next;
-        }
+            col++;
 
-        if (temp->accountno == accNum)
-        {
-            strcpy(temp->address, address);
-            modified = 0;
-        }
-    }
-
-    return modified;
-}
-
-/******************************************************************************
-//
-//  FUNCTION NAME: deleteRecord
-//
-//  DESCRIPTION:   deleteRecord function removes the specified entry.
-//
-//  PARAMETERS:    entry     : Pointer the pointers address of the entry.
-//                 accNum    : Account number for the entry.
-//
-//  RETURN VALUES: 0 : Success.
-//
-******************************************************************************/
-
-int deleteRecord(struct record ** entry, int accNum)
-{
-    struct record * temp = *entry;
-    struct record * last = *entry;
-    int deleted = 2;
-
-    if (debugMode == 0)
-    {
-        printf("\n\nFUNCTION NAME: deleteRecord\n");
-        printf("Account Number: %d\n", accNum);
-    }
-
-    if (temp == NULL)
-    {
-        printf("\nThe database is empty.\n");
-    }
-    else
-    {
-        while(temp->next != NULL)
-        {
-            if (temp->accountno == accNum)
+            if(row > 2)
             {
-                if (temp == *entry)
+                stringstream temp(parsed[0]);
+                temp >> accNum;
+                this->addRecord(accNum, parsed[1], parsed[2]);
+
+                accNum = 0;
+                for(row = 0; row < 3; row++)
                 {
-                    *entry = temp->next;
-                    temp = NULL;
-                    free(temp);
-                    temp = *entry;
-                    deleted = 0;
+                    for(col = 0; col < 80; col++)
+                    {
+                        parsed[row][col] = '\0';
+                    }
                 }
-                else
+
+                row = 0;
+                col = 0;
+            }
+        }
+        inFile.close();
+    }
+    else
+    {
+        success = -1;
+    }
+
+    return success;
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   writefile
+//
+//  DESCRIPTION:    A function used to write to files
+//
+//  PARAMETERS:     None
+//
+//  RETURNVALUES:   0   : Success
+//
+******************************************************************************/
+
+int llist::writefile()
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::writefile" << endl;
+    #endif
+
+    ofstream outFile(this->filename);
+    record * temp = NULL;
+    int i;
+    int success = 0;
+
+    if(!outFile.fail())
+    {
+        temp = (this->start);
+        while(temp != NULL)
+        {
+            for(i = 0; i < 25; i++)
+            {
+                if(temp->name[i] == '\n')
                 {
-                    last->next = temp->next;
-                    temp = NULL;
-                    free(temp);
-                    temp = last->next;
-                    deleted = 0;
+                    temp->name[i] = ';';
                 }
             }
+            for(i = 0; i < 80; i++)
+            {
+                if(temp->address[i] == '\n')
+                {
+                    temp->address[i] = ';';
+                }
+            }
+            outFile << temp->accountno << endl;
+            outFile << temp->name << endl;
+            outFile << temp->address << endl;
 
-            if(temp->next != NULL)
-            {
-                last = temp;
-                temp = temp->next;
-            }
+            temp = temp->next;
         }
-
-        if (temp->accountno == accNum)
-        {
-            if (temp == *entry)
-            {
-                temp = NULL;
-                free(temp);
-                *entry = NULL;
-                deleted = 0;
-            }
-            else
-            {
-                temp = NULL;
-                free(temp);
-                last->next = NULL;
-                deleted = 0;
-            }
-        }
+    }
+    else
+    {
+        success = -1;
     }
     
-    return deleted;
+    return success;
 }
 
 /******************************************************************************
 //
-//  FUNCTION NAME: cleanup
+//  FUNCTIONNAME:   reverse
 //
-//  DESCRIPTION:   cleanup function removes all entries.
+//  DESCRIPTION:    A function used to reverse the llist.
 //
-//  PARAMETERS:    entry     : Pointer the pointers address of the entry.
+//  PARAMETERS:     recordFwd : Pointer to the record to be reversed.
 //
-//  RETURN VALUES: 0 : Success.
+//  RETURNVALUES:   0   : Success
 //
 ******************************************************************************/
 
-void cleanup(struct record ** entry)
+record * llist::reverse(record * recordFwd)
 {
-    struct record * temp = *entry;
-    struct record * last = *entry;
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::record * reverse" << endl;
+    #endif
 
-    if (debugMode == 0)
+    record * temp;
+    bool done = false;
+
+    // Returns list as is if there is nothing to reverse
+    if(recordFwd == NULL || recordFwd->next == NULL)
     {
-        printf("\n\nFUNCTION NAME: cleanup\n");
+        temp = recordFwd;
+        done = true;
     }
 
-    if (temp == NULL)
+    // Reverses the list and returns temp
+    if(!done)
     {
-        printf("\nThe database is empty.\n");
+        temp = this->reverse(recordFwd->next);
+        ((recordFwd->next)->next) = recordFwd;
+        recordFwd->next = NULL;
+    }
+    
+    return temp;
+    
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   cleanup
+//
+//  DESCRIPTION:    A function used to 'free' the allocated memory and set the
+//                  pointer to NULL.
+//
+//  PARAMETERS:     None
+//
+//  RETURNVALUES:   0   : Success
+//
+******************************************************************************/
+
+void llist::cleanup()
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::cleanup" << endl;
+    #endif
+
+    record * temp;
+    while(this->start != NULL) 
+    {
+        temp = this->start;
+        this->start = ((this->start)->next);
+        delete(temp);
+        temp = NULL;
+    }
+    this->start = NULL;
+}
+    
+/******************************************************************************
+//
+//  FUNCTIONNAME:   llist
+//
+//  DESCRIPTION:    A constructor used to set the llist to NULL, set the
+//                  filename to 'database.txt', and readin the database file.
+//
+//  PARAMETERS:     None
+//
+//  RETURNVALUES:   0   : Success
+//
+******************************************************************************/
+
+llist::llist()
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::llist" << endl;
+    #endif
+
+    this->start = NULL;
+    strcpy(this->filename, "database.txt");
+    this->readfile();
+    
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   llist
+//
+//  DESCRIPTION:    A constructor used to set the llist to NULL, set the
+//                  filename to inFile[], and readin the database file.
+//
+//  PARAMETERS:     inFile : User specified filename for the database file.
+//
+//  RETURNVALUES:   0   : Success
+//
+******************************************************************************/
+
+llist::llist(char inFile[])
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::llist" << endl;
+        cout << "char[]: " << inFile << endl;
+    #endif
+
+    int i = 0;
+
+    while(inFile[i] != '\0')
+    {
+        i++;
+    }
+    if(i < 16)
+    {
+        strcpy(this->filename, inFile);
+    }
+    else
+    {
+        strcpy(this->filename, "database.txt");
+        cout << "Warning: Filename too long. New filename is: ";
+        cout << this->filename << endl;
+    }
+    
+    this->start = NULL;
+    this->readfile();
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   llist
+//
+//  DESCRIPTION:    A copy constructor used to set the llist to the same values
+//                  as the passed objects llist.
+//
+//  PARAMETERS:     obj : Object to copy.
+//
+//  RETURNVALUES:   0   : Success
+//
+******************************************************************************/
+
+llist::llist(llist const &obj)
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::llist" << endl;
+        cout << "Copy Constructor" << endl;
+    #endif
+
+    this->start = obj.start;
+    strcpy(this->filename, obj.filename);
+
+}
+
+llist & llist::operator = (const llist &obj)
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::llist" << endl;
+        cout << "Copy Constructor" << endl;
+    #endif
+
+    this->start = obj.start;
+    strcpy(this->filename, obj.filename);
+
+    return *this;
+
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   ~llist
+//
+//  DESCRIPTION:    A deconstructor used to write the database file, then
+//                  cleanup the allocated memory.
+//
+//  PARAMETERS:     None
+//
+//  RETURNVALUES:   0   : Success
+//
+******************************************************************************/
+
+llist::~llist()
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::~llist" << endl;
+    #endif
+
+    this->writefile();
+    this->cleanup();
+
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   addRecord
+//
+//  DESCRIPTION:    addRecord function creates a new record entry.
+//
+//  PARAMETERS:     accNum    : Account number for the entry.
+//                  name      : Pointer to the entry name.
+//                  address   : Pointer to the entry address.
+//
+//  RETURNVALUES:   0   : Success.
+//
+******************************************************************************/
+
+int llist::addRecord(int accNum, char name[25],char address[80])
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::addRecord" << endl;
+        cout << "accNum: " << accNum << endl;
+        cout << "name[25]: " << name << endl;
+        cout << "address[80]: " << address << endl;
+    #endif
+
+    record * temp = NULL;
+    int success = 2;
+
+    temp = this->start;
+    if(temp == NULL)
+    {
+        this->start = new record;
+        (this->start)->accountno = accNum;
+        strcpy((this->start)->name, name);
+        strcpy((this->start)->address, address);
+        (this->start)->next = NULL;
+        success = 0;
     }
     else
     {
         while(temp->next != NULL)
         {
-            if (temp == *entry)
+            temp = temp->next;
+        }
+        temp->next = new record;
+        temp = temp->next;
+        temp->accountno = accNum;
+        strcpy(temp->name, name);
+        strcpy(temp->address, address);
+        temp->next = NULL;
+        success = 0;
+    }
+
+    return success;
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   printRecord
+//
+//  DESCRIPTION:    printRecord function prints the specified record to screen.
+//
+//  PARAMETERS:     accNum  : Account number for the entry.
+//
+//  RETURNVALUES:   0   : Success.
+//
+******************************************************************************/
+
+int llist::printRecord(int accNum)
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::printRecord" << endl;
+        cout << "accNum: " << accNum << endl;
+    #endif
+
+    record * temp = NULL;
+    int success = 3;
+
+    temp = this->start;
+    while (temp != NULL)
+    {
+        if(temp->accountno == accNum)
+        {
+            cout << temp->accountno << endl;
+            cout << temp->name << endl;
+            cout << temp->address << endl;
+            success = 0;
+        }
+        temp = temp->next;
+    }
+
+    return success;
+}
+
+/******************************************************************************
+//
+//  OPERATORNAME:   <<
+//
+//  DESCRIPTION:    << prints all records in the llist.
+//
+//  PARAMETERS:     myCout  : Reference to ostream cout.
+//                  obj     : Reference to the llist object to print.
+//
+//  RETURNVALUES:   myCout  : All records in an ostream.
+//
+******************************************************************************/
+
+ostream & operator << (ostream &myCout, const llist &obj)
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::operator <<" << endl;
+    #endif
+
+    record * temp = NULL;
+
+    temp = obj.start;
+    while(temp != NULL)
+    {
+        myCout << temp->accountno << endl;
+        myCout << temp->name << endl;
+        myCout << temp->address << endl;
+        myCout << endl;
+        temp = temp->next;
+    }
+    return myCout;
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   modifyRecord
+//
+//  DESCRIPTION:    modifyRecord function changes the specified address.
+//
+//  PARAMETERS:     accNum  : Account number for the entry.
+//                  address : Pointer to the entry address.
+//
+//  RETURNVALUES:   0   : Success.
+//
+******************************************************************************/
+
+int llist::modifyRecord(int accNum, char address[80])
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::modifyRecord" << endl;
+        cout << "accNum: " << accNum << endl;
+        cout << "address[80]: " << address << endl;
+    #endif
+
+    record * temp = NULL;
+    int success = 4;
+
+    temp = this->start;
+    while(temp != NULL)
+    {
+        if(temp->accountno == accNum)
+        {
+            strcpy(temp->address, address);
+            success = 0;
+        }
+        temp = temp->next;
+    }
+
+    return success;
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   deleteRecord
+//
+//  DESCRIPTION:    deleteRecord function removes the specified entry.
+//
+//  PARAMETERS:     accNum  : Account number for the entry.
+//
+//  RETURNVALUES:   0   : Success.
+//
+******************************************************************************/
+
+int llist::deleteRecord(int accNum)
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::deleteRecord" << endl;
+        cout << "accNum: " << accNum << endl;
+    #endif
+
+    record * temp = NULL;
+    record * previous = NULL;
+    int success = 5;
+
+    temp = this->start;
+    while(temp != NULL)
+    {
+        if(temp->accountno == accNum)
+        {
+            if(temp == this->start)
             {
-                *entry = temp->next;
-                temp = NULL;
-                free(temp);
-                temp = *entry;
+                previous = this->start;
+                start = (this->start)->next;
+                temp = this->start;
+                delete(previous);
+                previous = NULL;
+                success = 0;
             }
             else
             {
-                last->next = temp->next;
-                temp = NULL;
-                free(temp);
-                temp = last->next;
+                previous->next = temp->next;
+                delete(temp);
+                temp = previous->next;
+                success = 0;
             }
-
-            if(temp->next != NULL)
-            {
-                last = temp;
-                temp = temp->next;
-            }
-        }
-
-        if (temp == *entry)
-        {
-            temp = NULL;
-            free(temp);
-            *entry = NULL;
         }
         else
         {
-            temp = NULL;
-            free(temp);
-            last->next = NULL;
+            previous = temp;
+            temp = temp->next;
         }
     }
+
+    return success;
+}
+
+/******************************************************************************
+//
+//  FUNCTIONNAME:   reverse
+//
+//  DESCRIPTION:    reverse function calls the private function to reverse the
+//                  llist and replace the previous llist.
+//
+//  PARAMETERS:     None
+//
+//  RETURNVALUES:   0   : Success.
+//
+******************************************************************************/
+
+void llist::reverse()
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::reverse" << endl;
+    #endif
+
+    this->start = this->reverse(this->start);
 }

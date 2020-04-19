@@ -1,14 +1,38 @@
-project: main.o user_interface.o database.o iofunctions.o
-		gcc -o project main.o user_interface.o database.o iofunctions.o
-main.o: main.c
-		gcc -ansi -pedantic-errors -Wall -c main.c
-iofunctions.o: iofunctions.c iofunctions.h
-		gcc -ansi -pedantic-errors -Wall -c iofunctions.c
-user_interface.o: user_interface.c user_interface.h
-		gcc -ansi -pedantic-errors -Wall -c user_interface.c
-database.o: database.c database.h
-		gcc -ansi -pedantic-errors -Wall -c database.c
+# Executables to build using 'make all'
+EXECUTABLES = project project_debug
+
+# The default compiler
+CC = g++
+
+# The FLAGS variables sets compile flags for the CC
+CFLAGS = -c -ansi -pedantic-errors -Wall
+DFLAGS = -c -ansi -pedantic-errors -Wall -DDEBUGMODE
+
+# The object files to be linked
+OBJS = userinterface.o llist.o
+DOBJS = userinterface_debug.o llist_debug.o
+
+# Make commands
+all: $(EXECUTABLES)
+
+# Alter the existing files
 ready:
-		touch main.c user_interface.c database.c iofunctions.c
+		touch userinterface.cpp llist.cpp
 clean:
-		rm -f *.o project 
+		rm -f $(EXECUTABLES) $(OBJS) core.*
+
+# Create project
+project: $(OBJS)
+		$(CC) -o project $(OBJS)
+llist.o: llist.cpp llist.h record.h
+		$(CC) $(CFLAGS) llist.cpp
+userinterface.o: userinterface.cpp userinterface.h
+		$(CC) $(CFLAGS) userinterface.cpp
+
+# Create project_debug
+project_debug: $(DOBJS)
+		$(CC) -o project_debug $(OBJS)
+llist_debug.o: llist.cpp llist.h record.h
+		$(CC) $(DFLAGS) llist.cpp
+userinterface_debug.o: userinterface.cpp userinterface.h
+		$(CC) $(DFLAGS) userinterface.cpp

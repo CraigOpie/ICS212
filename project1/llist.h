@@ -1,47 +1,51 @@
 /*******************************************************************************
 //
-//  NAME:          Craig Opie
+//  NAME:           Craig Opie
 //
-//  HOMEWORK:      project1
+//  HOMEWORK:       project2
 //
-//  CLASS:         ICS 212
+//  CLASS:          ICS 212
 //
-//  INSTRUCTOR     Ravi Narayan
+//  INSTRUCTOR:     Ravi Narayan
 //
-//  DATE:          Feb 11, 2020
+//  DATE:           April 03, 2020
 //
-//  FILE:          database.h
+//  FILE:           llist.h
 //
-//  DESCRIPTION:   This file declares the prototypes for the functions used
-//                 to modify the struct records. These functions require
-//                 using the 'record.h' file to create the structs.  Each
-//                 function also includes a debug mode which requires a global
-//                 variable named debugMode to be initialized in main.
+//  DESCRIPTION:    This file declares the class used to store records.
 //
 ******************************************************************************/
 
-#ifndef _database_h
-#define _database_h
+#ifndef _llist_h
+#define _llist_h
 
+#include "llist.h"
 #include "record.h"
-extern int debugMode;
+using namespace std;
 
-/* Adds a record to the struct */
-int addRecord (struct record **, int, char [], char []);
+/* creates a class used capsulate the 'database' */
+class llist
+{
+private:
+    record *    start;
+    char        filename[16];
+    int         readfile();
+    int         writefile();
+    record *    reverse(record * );
+    void        cleanup();
 
-/* Prints the specified record to the screen */
-int printRecord (struct record *, int);
-
-/* Prints all records to the screen */
-void printAllRecords (struct record *);
-
-/* Change the record's address */
-int modifyRecord (struct record *, int, char []);
-
-/* Delete the specified record */
-int deleteRecord (struct record **, int);
-
-/* Releases all allocated heap space and assigns NULL to start */
-void cleanup(struct record ** entry);
+public:
+    llist();
+    llist(char[]);
+    llist(const llist &);
+    llist & operator = (const llist &);
+    ~llist();
+    int addRecord(int, char [],char []);
+    int printRecord(int);
+    friend ostream & operator << (ostream &, const llist &);
+    int modifyRecord(int, char []);
+    int deleteRecord(int);
+    void reverse();
+};
 
 #endif
