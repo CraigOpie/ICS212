@@ -391,6 +391,8 @@ void getName(char * text)
             }
         }
     }
+    cin.clear();
+    cin.ignore(999, '\n');
 }
 
 
@@ -433,4 +435,6 @@ void getAddress(char * text)
             }
         }
     }
+    cin.clear();
+    cin.ignore(999, '\n');
 }

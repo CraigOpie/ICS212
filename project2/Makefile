@@ -19,7 +19,7 @@ all: $(EXECUTABLES)
 ready:
 		touch userinterface.cpp llist.cpp
 clean:
-		rm -f $(EXECUTABLES) $(OBJS)
+		rm -f $(EXECUTABLES) $(OBJS) core.*
 
 # Create project
 project: $(OBJS)
