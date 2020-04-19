@@ -22,31 +22,14 @@
 #include "llist.h"
 using namespace std;
 
-// manFile function informs the user about using arguments
 void manFile();
-
-// interface menu to navigate the program and its features
 int menu(llist &);
-
-// interface menu to navigate the program and its features
 int userAddRecord(llist &);
-
-// interface menu to navigate the program and its features
 int userPrintRecord(llist &);
-
-// interface menu to navigate the program and its features
 int userModifyRecord(llist &);
-
-// interface menu to navigate the program and its features
 int userDeleteRecord(llist &);
-
-// interface menu to navigate the program and its features
 int getAccNo();
-
-// interface menu to navigate the program and its features
 void getName(char *);
-
-// interface menu to navigate the program and its features
 void getAddress(char *);
 
 #endif
