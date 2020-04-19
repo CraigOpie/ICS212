@@ -38,6 +38,7 @@ public:
     llist();
     llist(char[]);
     llist(const llist &);
+    llist & operator = (const llist &);
     ~llist();
     int addRecord(int, char [],char []);
     int printRecord(int);

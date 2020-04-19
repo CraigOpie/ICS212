@@ -309,10 +309,25 @@ llist::llist(llist const &obj)
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: llist::llist" << endl;
+        cout << "Copy Constructor" << endl;
     #endif
 
     this->start = obj.start;
     strcpy(this->filename, obj.filename);
+
+}
+
+llist & llist::operator = (const llist &obj)
+{
+    #ifdef DEBUGMODE
+        cout << "FUNCTION NAME: llist::llist" << endl;
+        cout << "Copy Constructor" << endl;
+    #endif
+
+    this->start = obj.start;
+    strcpy(this->filename, obj.filename);
+
+    return *this;
 
 }
 

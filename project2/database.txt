@@ -1,6 +1,3 @@
 123
 Craig
-Home
-456
-Janelle
-Home
+725 Kapiolani Blvd;Apt 3304;Honolulu, HI 96813
