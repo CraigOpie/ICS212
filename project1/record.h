@@ -1,18 +1,18 @@
 /*******************************************************************************
 //
-//  NAME:          Craig Opie
+//  NAME:           Craig Opie
 //
-//  HOMEWORK:      3b
+//  HOMEWORK:       project2
 //
-//  CLASS:         ICS 212
+//  CLASS:          ICS 212
 //
-//  INSTRUCTOR     Ravi Narayan
+//  INSTRUCTOR:     Ravi Narayan
 //
-//  DATE:          Feb 11, 2020
+//  DATE:           April 03, 2020
 //
-//  FILE:          record.h
+//  FILE:           record.h
 //
-//  DESCRIPTION:   This file declares the struct used to store records.
+//  DESCRIPTION:    This file declares the struct used to store records.
 //
 ******************************************************************************/
 

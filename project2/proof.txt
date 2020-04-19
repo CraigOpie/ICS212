@@ -1,0 +1,435 @@
+Script started on Sun 19 Apr 2020 12:25:37 AM HST
+]0;opieca@uhx02:~/ICS212/project1[?1034huhx02:/home/o/opieca/ICS212/project1% git checkout project2[K1
+Switched to branch 'project1'
+]0;opieca@uhx02:~/ICS212/project1uhx02:/home/o/opieca/ICS212/project1% sh getreport.sh
+* 3f6bb4f [31m (project2) [32m2020-04-19 [34mCraig Opie [mwrote over the renamed files with project2 files
+* c87cd4a [31m [32m2020-04-19 [34mCraig Opie [mRename files
+* a1745d0 [31m (origin/master, origin/HEAD, master) [32m2020-04-19 [34mCraigOpie [mmade clean
+* f317aa8 [31m (upstream/master) [32m2020-04-19 [34mCraigOpie [mmatched database files
+* 3bacdf7 [31m [32m2020-04-18 [34mCraigOpie [mgetting rid of extra files
+*   e27476a [31m [32m2020-04-18 [34mGitHub [mMerge pull request #1 from CraigOpie/project2
+[32m|[m[33m\[m  
+[32m|[m * 5a0d3a3 [31m [32m2020-04-18 [34mCraigOpie [madded summary
+[32m|[m * 7b8fcdb [31m [32m2020-04-18 [34mCraigOpie [mFully tested and working perfectly
+[32m|[m * b39af3a [31m [32m2020-04-18 [34mCraigOpie [mAdded second assignment operator
+[32m|[m * f14d2d5 [31m [32m2020-04-18 [34mCraigOpie [mSet next to null upon add record
+[32m|[m * b3fbf01 [31m [32m2020-04-18 [34mCraigOpie [mChanged loop parameter for printing
+[32m|[m * 62f34c5 [31m [32m2020-04-18 [34mCraigOpie [mChanged nullptr back to NULL
+[32m|[m * ad42ada [31m [32m2020-04-18 [34mCraigOpie [mChanged NULL to nullptr
+[32m|[m * 67c1910 [31m [32m2020-04-18 [34mCraigOpie [mremoved ignore
+[32m|[m * 33c9ae2 [31m [32m2020-04-18 [34mCraigOpie [mchanged cin.clear parameter
+[32m|[m *   2fc390c [31m [32m2020-04-18 [34mCraigOpie [mMerge branch 'project2' of github.com:CraigOpie/ICS212 into project2
+[32m|[m [34m|[m[35m\[m  
+[32m|[m * [35m|[m 5d0b698 [31m [32m2020-04-18 [34mCraigOpie [mAdded cin.clear
+[32m|[m [35m|[m * 00ab3f9 [31m [32m2020-04-18 [34mCraig Opie [madded core.* to makefile for segmentation faults
+[32m|[m [35m|[m[35m/[m  
+[32m|[m * 9d65d52 [31m [32m2020-04-18 [34mCraigOpie [mfixed the makefile
+[32m|[m * 3b598a3 [31m [32m2020-04-18 [34mCraigOpie [m On branch project2
+[32m|[m * c8361d5 [31m [32m2020-04-18 [34mCraigOpie [m On branch project2
+[32m|[m * b510c24 [31m [32m2020-04-18 [34mCraigOpie [m On branch project2
+[32m|[m * 6243bba [31m [32m2020-04-15 [34mCraigOpie [mcompiles but does not store records to the class
+[32m|[m * 487e266 [31m [32m2020-04-08 [34mCraigOpie [mFirst commit on this branch
+[32m|[m[32m/[m  
+* ab6d0e0 [31m [32m2020-04-04 [34mCraigOpie [madded project1
+* 520d7b5 [31m [32m2020-04-04 [34mCraigOpie [mReset project1
+* 8597bc0 [31m [32m2020-03-31 [34mCraig Opie [madded proof and output
+* 61c03c9 [31m [32m2020-03-31 [34mCraigOpie [mcompleted homework8
+* b38ae02 [31m [32m2020-03-28 [34mCraig Opie [msubmit files for homework7b after fixes to comments
+* 04034cc [31m [32m2020-03-28 [34mCraigOpie [mcorrected comments in homework7b
+* 43eaccf [31m [32m2020-03-28 [34mCraig Opie [mhomework7b submit files
+* 801c459 [31m [32m2020-03-28 [34mCraigOpie [mchanged formatting for printf on homework7b
+* 74421f1 [31m [32m2020-03-28 [34mCraigOpie [mmade homework7b clean
+* f9ed984 [31m [32m2020-03-28 [34mCraigOpie [mhomework7b
+* e3ee1f6 [31m [32m2020-03-21 [34mCraig Opie [mmoved zip file to folder
+* 26b0437 [31m [32m2020-03-21 [34mCraig Opie [mhomework7a with zip
+* f3ea5a9 [31m [32m2020-03-21 [34mCraig Opie [mhomework7a
+* 5560a14 [31m [32m2020-03-14 [34mCraig Opie [mupdated .gitignore file
+[35m|[m * d2ecaae [31m (HEAD, upstream/project1, origin/project1, project1) [32m2020-03-14 [34mCraig Opie [mProject1 zip file and proof
+[35m|[m * 38a496a [31m [32m2020-03-14 [34mCraig Opie [mModified Makefile in project1 branch
+[35m|[m * 0f661bf [31m [32m2020-03-14 [34mCraig Opie [mRemoved troubleshooting message
+[35m|[m[35m/[m  
+* df9c087 [31m [32m2020-03-14 [34mCraig Opie [mAdded status of reading and writing
+* 42889e7 [31m [32m2020-03-14 [34mCraig Opie [mAdded error messages if files not found
+* 08a28f5 [31m [32m2020-03-14 [34mCraig Opie [mchanges to headers
+* d715c67 [31m [32m2020-03-14 [34mCraig Opie [mAdded finished testing and summary
+* 25dd93e [31m [32m2020-03-14 [34mCraig Opie [mAdded scripts
+* 2b1476e [31m [32m2020-03-14 [34mCraig Opie [madded cleanup function
+* c495a08 [31m [32m2020-03-14 [34mCraig Opie [mWorking project1
+* 0721909 [31m [32m2020-03-13 [34mCraig Opie [madded reading files to project1
+* 7bb6351 [31m [32m2020-03-13 [34mCraig Opie [mrequires iofunctions
+* 444c8ce [31m [32m2020-03-10 [34mCraigOpie [mfixed homework 5
+* d7d7feb [31m [32m2020-03-10 [34mCraigOpie [mremoved readme in homework 6b
+* 0688c2f [31m [32m2020-03-10 [34mCraig Opie [mCopied proof and report files for homework 6b
+* f899479 [31m [32m2020-03-10 [34mGitHub [mAdd files via upload
+* d3f44e7 [31m [32m2020-03-10 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+*   3d5d93a [31m [32m2020-03-10 [34mCraig Opie [mMerge branch 'master' of github.com:CraigOpie/ICS212
+[1;31m|[m[1;32m\[m  
+* [1;32m|[m adddaae [31m [32m2020-03-10 [34mCraig Opie [mAdded homework 6b
+* [1;32m|[m eed3f50 [31m [32m2020-03-07 [34mCraig Opie [mnow
+[1;32m|[m * c4cd09e [31m [32m2020-03-07 [34mGitHub [mAdd files via upload
+[1;32m|[m[1;32m/[m  
+* ae6991a [31m [32m2020-03-07 [34mCraig Opie [mhomework6a
+* ec73cfd [31m [32m2020-03-02 [34mCraig Opie [mzip
+* 285a5c4 [31m [32m2020-03-02 [34mCraigOpie [mtest
+* 598eb0f [31m [32m2020-03-02 [34mCraigOpie [mtest
+* 3087d96 [31m [32m2020-03-02 [34mCraigOpie [mtest
+* 60d4c2e [31m [32m2020-03-02 [34mCraig Opie [mrewrite
+* c147fb5 [31m [32m2020-03-02 [34mCraig Opie [mfound issue function
+* 14084fd [31m [32m2020-03-02 [34mCraigOpie [madded ts prints
+*   08e9947 [31m [32m2020-03-02 [34mCraig Opie [mfound issue
+[1;33m|[m[1;34m\[m  
+* [1;34m|[m 8d9b9ac [31m [32m2020-03-02 [34mCraig Opie [moops
+[1;34m|[m * d253fcf [31m [32m2020-03-02 [34mCraigOpie [mts
+[1;34m|[m[1;34m/[m  
+* ab19370 [31m [32m2020-03-02 [34mCraigOpie [madded prints
+* a58f827 [31m [32m2020-03-02 [34mCraig Opie [mCompiles now
+* 43623b7 [31m [32m2020-03-02 [34mCraig Opie [mWTF
+* 4b595c5 [31m [32m2020-03-02 [34mCraigOpie [mI don't know why this is happening
+* 2904270 [31m [32m2020-03-02 [34mCraigOpie [mfixed values for bankone
+* f7dfad2 [31m [32m2020-03-02 [34mCraigOpie [mmade changes to array
+*   a13e05d [31m [32m2020-03-02 [34mCraig Opie [mupdated makefile
+[1;35m|[m[1;36m\[m  
+* [1;36m|[m c1ceaa0 [31m [32m2020-03-02 [34mCraig Opie [mupdated make file
+[1;36m|[m * a51251b [31m [32m2020-03-02 [34mCraigOpie [madded driver file
+[1;36m|[m[1;36m/[m  
+* 196f437 [31m [32m2020-03-02 [34mCraigOpie [mfixed string issues
+* 6c32bdd [31m [32m2020-03-02 [34mCraigOpie [mtrying to pass dereference
+* 253765c [31m [32m2020-03-02 [34mCraigOpie [mfixed array definition
+* 82d1817 [31m [32m2020-03-02 [34mCraigOpie [mfixed fprintf int
+* b24dc7d [31m [32m2020-03-01 [34mCraigOpie [mchanged fopen
+* ec2a979 [31m [32m2020-03-01 [34mCraigOpie [mremoved text paramater
+* 468708b [31m [32m2020-03-01 [34mCraigOpie [mfixed type array
+* 411ed52 [31m [32m2020-03-01 [34mCraigOpie [madded prototype for strToInt
+* d0e71e0 [31m [32m2020-03-01 [34mCraigOpie [madded prototype for strToInt
+* d004fb0 [31m [32m2020-03-01 [34mCraigOpie [madded prototype
+* 0c88a97 [31m [32m2020-03-01 [34mCraigOpie [mSome fixes
+* 9d08cc4 [31m [32m2020-03-01 [34mCraigOpie [mfixed errors due to ;
+* a08580e [31m [32m2020-03-01 [34mCraig Opie [madded makefile
+* e5ca56e [31m [32m2020-03-01 [34mCraigOpie [mtest1
+* 83c9849 [31m [32m2020-02-29 [34mCraig Opie [mHomework 5
+* 69b5040 [31m [32m2020-02-23 [34mGitHub [mAdd files via upload
+*   72be39b [31m [32m2020-02-23 [34mCraig Opie [mMerge branch 'master' of github.com:CraigOpie/ICS212
+[31m|[m[32m\[m  
+* [32m|[m 1619983 [31m [32m2020-02-23 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+[32m|[m * cac4a3d [31m [32m2020-02-16 [34mGitHub [mDelete .nfs0000000002751dee000000d0
+[32m|[m[32m/[m  
+* 3ba51fb [31m [32m2020-02-16 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 6efbf10 [31m [32m2020-02-16 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 5c2a1c1 [31m [32m2020-02-16 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* d507682 [31m [32m2020-02-08 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 98dc5c1 [31m [32m2020-02-08 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 0190b30 [31m [32m2020-02-04 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 6480a2d [31m [32m2020-02-04 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* caf86c0 [31m [32m2020-02-01 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* f35c5ea [31m [32m2020-01-31 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* dedb0b5 [31m [32m2020-01-28 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 957d309 [31m [32m2020-01-22 [34mCraig Opie [m Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 2917df7 [31m [32m2020-01-20 [34mCraig Opie [m Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 4cd9c91 [31m [32m2020-01-20 [34mCraig Opie [m Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 8de43de [31m [32m2020-01-18 [34mCraig Opie [m Committer: Craig Opie <opieca@uhx02.its.hawaii.edu>
+* 1b746b7 [31m [32m2020-01-18 [34mGitHub [mInitial commit
+# On branch project1
+nothing to commit, working directory clean
+total 80
+drwxr-xr-x.  2 opieca uh   233 Apr 19 00:25 .
+drwxr-xr-x. 15 opieca uh  4096 Apr 19 00:25 ..
+-rw-r--r--.  1 opieca uh  9145 Apr 19 00:25 database.c
+-rw-r--r--.  1 opieca uh  1357 Apr 19 00:25 database.h
+-rwxr-xr-x.  1 opieca uh   165 Apr 18 20:47 getreport.sh
+-rw-r--r--.  1 opieca uh    46 Apr 19 00:25 .gitignore
+-rw-r--r--.  1 opieca uh  6168 Apr 18 20:47 iofunctions.c
+-rw-r--r--.  1 opieca uh   709 Apr 18 20:47 iofunctions.h
+-rw-r--r--.  1 opieca uh  2476 Apr 18 20:47 main.c
+-rw-r--r--.  1 opieca uh   561 Apr 19 00:25 Makefile
+-rw-r--r--.  1 opieca uh  8192 Apr 19 00:25 proof.txt
+-rw-r--r--.  1 opieca uh   672 Apr 19 00:25 record.h
+-rw-r--r--.  1 opieca uh 13789 Apr 19 00:25 user_interface.c
+-rw-r--r--.  1 opieca uh  1580 Apr 18 20:47 user_interface.h
+rm: cannot remove ‘*.o’: No such file or directory
+gcc -ansi -pedantic-errors -Wall -c main.c
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -ansi -pedantic-errors -Wall -c database.c
+gcc -ansi -pedantic-errors -Wall -c iofunctions.c
+gcc -o project main.o user_interface.o database.o iofunctions.o
+]0;opieca@uhx02:~/ICS212/project1uhx02:/home/o/opieca/ICS212/project1% ./project 
+
+================================================================================
+
+Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+================================================================================
+
+Please choose a menu option by typing the corresponding number
+and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 3
+
+The database is empty.
+
+Please choose a menu option by typing the corresponding number
+and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Quit.
+Option: 6
+
+The database is empty.
+]0;opieca@uhx02:~/ICS212/project1uhx02:/home/o/opieca/ICS212/project1% git checkout project2
+Switched to branch 'project2'
+]0;opieca@uhx02:~/ICS212/project1uhx02:/home/o/opieca/ICS212/project1% sh getreport.sh 
+* 3f6bb4f [31m (HEAD, project2) [32m2020-04-19 [34mCraig Opie [mwrote over the renamed files with project2 files
+* c87cd4a [31m [32m2020-04-19 [34mCraig Opie [mRename files
+* a1745d0 [31m (origin/master, origin/HEAD, master) [32m2020-04-19 [34mCraigOpie [mmade clean
+* f317aa8 [31m (upstream/master) [32m2020-04-19 [34mCraigOpie [mmatched database files
+* 3bacdf7 [31m [32m2020-04-18 [34mCraigOpie [mgetting rid of extra files
+*   e27476a [31m [32m2020-04-18 [34mGitHub [mMerge pull request #1 from CraigOpie/project2
+[32m|[m[33m\[m  
+[32m|[m * 5a0d3a3 [31m [32m2020-04-18 [34mCraigOpie [madded summary
+[32m|[m * 7b8fcdb [31m [32m2020-04-18 [34mCraigOpie [mFully tested and working perfectly
+[32m|[m * b39af3a [31m [32m2020-04-18 [34mCraigOpie [mAdded second assignment operator
+[32m|[m * f14d2d5 [31m [32m2020-04-18 [34mCraigOpie [mSet next to null upon add record
+[32m|[m * b3fbf01 [31m [32m2020-04-18 [34mCraigOpie [mChanged loop parameter for printing
+[32m|[m * 62f34c5 [31m [32m2020-04-18 [34mCraigOpie [mChanged nullptr back to NULL
+[32m|[m * ad42ada [31m [32m2020-04-18 [34mCraigOpie [mChanged NULL to nullptr
+[32m|[m * 67c1910 [31m [32m2020-04-18 [34mCraigOpie [mremoved ignore
+[32m|[m * 33c9ae2 [31m [32m2020-04-18 [34mCraigOpie [mchanged cin.clear parameter
+[32m|[m *   2fc390c [31m [32m2020-04-18 [34mCraigOpie [mMerge branch 'project2' of github.com:CraigOpie/ICS212 into project2
+[32m|[m [34m|[m[35m\[m  
+[32m|[m * [35m|[m 5d0b698 [31m [32m2020-04-18 [34mCraigOpie [mAdded cin.clear
+[32m|[m [35m|[m * 00ab3f9 [31m [32m2020-04-18 [34mCraig Opie [madded core.* to makefile for segmentation faults
+[32m|[m [35m|[m[35m/[m  
+[32m|[m * 9d65d52 [31m [32m2020-04-18 [34mCraigOpie [mfixed the makefile
+[32m|[m * 3b598a3 [31m [32m2020-04-18 [34mCraigOpie [m On branch project2
+[32m|[m * c8361d5 [31m [32m2020-04-18 [34mCraigOpie [m On branch project2
+[32m|[m * b510c24 [31m [32m2020-04-18 [34mCraigOpie [m On branch project2
+[32m|[m * 6243bba [31m [32m2020-04-15 [34mCraigOpie [mcompiles but does not store records to the class
+[32m|[m * 487e266 [31m [32m2020-04-08 [34mCraigOpie [mFirst commit on this branch
+[32m|[m[32m/[m  
+* ab6d0e0 [31m [32m2020-04-04 [34mCraigOpie [madded project1
+* 520d7b5 [31m [32m2020-04-04 [34mCraigOpie [mReset project1
+* 8597bc0 [31m [32m2020-03-31 [34mCraig Opie [madded proof and output
+* 61c03c9 [31m [32m2020-03-31 [34mCraigOpie [mcompleted homework8
+* b38ae02 [31m [32m2020-03-28 [34mCraig Opie [msubmit files for homework7b after fixes to comments
+* 04034cc [31m [32m2020-03-28 [34mCraigOpie [mcorrected comments in homework7b
+* 43eaccf [31m [32m2020-03-28 [34mCraig Opie [mhomework7b submit files
+* 801c459 [31m [32m2020-03-28 [34mCraigOpie [mchanged formatting for printf on homework7b
+* 74421f1 [31m [32m2020-03-28 [34mCraigOpie [mmade homework7b clean
+* f9ed984 [31m [32m2020-03-28 [34mCraigOpie [mhomework7b
+* e3ee1f6 [31m [32m2020-03-21 [34mCraig Opie [mmoved zip file to folder
+* 26b0437 [31m [32m2020-03-21 [34mCraig Opie [mhomework7a with zip
+* f3ea5a9 [31m [32m2020-03-21 [34mCraig Opie [mhomework7a
+* 5560a14 [31m [32m2020-03-14 [34mCraig Opie [mupdated .gitignore file
+[35m|[m * d2ecaae [31m (upstream/project1, origin/project1, project1) [32m2020-03-14 [34mCraig Opie [mProject1 zip file and proof
+[35m|[m * 38a496a [31m [32m2020-03-14 [34mCraig Opie [mModified Makefile in project1 branch
+[35m|[m * 0f661bf [31m [32m2020-03-14 [34mCraig Opie [mRemoved troubleshooting message
+[35m|[m[35m/[m  
+* df9c087 [31m [32m2020-03-14 [34mCraig Opie [mAdded status of reading and writing
+* 42889e7 [31m [32m2020-03-14 [34mCraig Opie [mAdded error messages if files not found
+* 08a28f5 [31m [32m2020-03-14 [34mCraig Opie [mchanges to headers
+* d715c67 [31m [32m2020-03-14 [34mCraig Opie [mAdded finished testing and summary
+* 25dd93e [31m [32m2020-03-14 [34mCraig Opie [mAdded scripts
+* 2b1476e [31m [32m2020-03-14 [34mCraig Opie [madded cleanup function
+* c495a08 [31m [32m2020-03-14 [34mCraig Opie [mWorking project1
+* 0721909 [31m [32m2020-03-13 [34mCraig Opie [madded reading files to project1
+* 7bb6351 [31m [32m2020-03-13 [34mCraig Opie [mrequires iofunctions
+* 444c8ce [31m [32m2020-03-10 [34mCraigOpie [mfixed homework 5
+* d7d7feb [31m [32m2020-03-10 [34mCraigOpie [mremoved readme in homework 6b
+* 0688c2f [31m [32m2020-03-10 [34mCraig Opie [mCopied proof and report files for homework 6b
+* f899479 [31m [32m2020-03-10 [34mGitHub [mAdd files via upload
+* d3f44e7 [31m [32m2020-03-10 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+*   3d5d93a [31m [32m2020-03-10 [34mCraig Opie [mMerge branch 'master' of github.com:CraigOpie/ICS212
+[1;31m|[m[1;32m\[m  
+* [1;32m|[m adddaae [31m [32m2020-03-10 [34mCraig Opie [mAdded homework 6b
+* [1;32m|[m eed3f50 [31m [32m2020-03-07 [34mCraig Opie [mnow
+[1;32m|[m * c4cd09e [31m [32m2020-03-07 [34mGitHub [mAdd files via upload
+[1;32m|[m[1;32m/[m  
+* ae6991a [31m [32m2020-03-07 [34mCraig Opie [mhomework6a
+* ec73cfd [31m [32m2020-03-02 [34mCraig Opie [mzip
+* 285a5c4 [31m [32m2020-03-02 [34mCraigOpie [mtest
+* 598eb0f [31m [32m2020-03-02 [34mCraigOpie [mtest
+* 3087d96 [31m [32m2020-03-02 [34mCraigOpie [mtest
+* 60d4c2e [31m [32m2020-03-02 [34mCraig Opie [mrewrite
+* c147fb5 [31m [32m2020-03-02 [34mCraig Opie [mfound issue function
+* 14084fd [31m [32m2020-03-02 [34mCraigOpie [madded ts prints
+*   08e9947 [31m [32m2020-03-02 [34mCraig Opie [mfound issue
+[1;33m|[m[1;34m\[m  
+* [1;34m|[m 8d9b9ac [31m [32m2020-03-02 [34mCraig Opie [moops
+[1;34m|[m * d253fcf [31m [32m2020-03-02 [34mCraigOpie [mts
+[1;34m|[m[1;34m/[m  
+* ab19370 [31m [32m2020-03-02 [34mCraigOpie [madded prints
+* a58f827 [31m [32m2020-03-02 [34mCraig Opie [mCompiles now
+* 43623b7 [31m [32m2020-03-02 [34mCraig Opie [mWTF
+* 4b595c5 [31m [32m2020-03-02 [34mCraigOpie [mI don't know why this is happening
+* 2904270 [31m [32m2020-03-02 [34mCraigOpie [mfixed values for bankone
+* f7dfad2 [31m [32m2020-03-02 [34mCraigOpie [mmade changes to array
+*   a13e05d [31m [32m2020-03-02 [34mCraig Opie [mupdated makefile
+[1;35m|[m[1;36m\[m  
+* [1;36m|[m c1ceaa0 [31m [32m2020-03-02 [34mCraig Opie [mupdated make file
+[1;36m|[m * a51251b [31m [32m2020-03-02 [34mCraigOpie [madded driver file
+[1;36m|[m[1;36m/[m  
+* 196f437 [31m [32m2020-03-02 [34mCraigOpie [mfixed string issues
+* 6c32bdd [31m [32m2020-03-02 [34mCraigOpie [mtrying to pass dereference
+* 253765c [31m [32m2020-03-02 [34mCraigOpie [mfixed array definition
+* 82d1817 [31m [32m2020-03-02 [34mCraigOpie [mfixed fprintf int
+* b24dc7d [31m [32m2020-03-01 [34mCraigOpie [mchanged fopen
+* ec2a979 [31m [32m2020-03-01 [34mCraigOpie [mremoved text paramater
+* 468708b [31m [32m2020-03-01 [34mCraigOpie [mfixed type array
+* 411ed52 [31m [32m2020-03-01 [34mCraigOpie [madded prototype for strToInt
+* d0e71e0 [31m [32m2020-03-01 [34mCraigOpie [madded prototype for strToInt
+* d004fb0 [31m [32m2020-03-01 [34mCraigOpie [madded prototype
+* 0c88a97 [31m [32m2020-03-01 [34mCraigOpie [mSome fixes
+* 9d08cc4 [31m [32m2020-03-01 [34mCraigOpie [mfixed errors due to ;
+* a08580e [31m [32m2020-03-01 [34mCraig Opie [madded makefile
+* e5ca56e [31m [32m2020-03-01 [34mCraigOpie [mtest1
+* 83c9849 [31m [32m2020-02-29 [34mCraig Opie [mHomework 5
+* 69b5040 [31m [32m2020-02-23 [34mGitHub [mAdd files via upload
+*   72be39b [31m [32m2020-02-23 [34mCraig Opie [mMerge branch 'master' of github.com:CraigOpie/ICS212
+[31m|[m[32m\[m  
+* [32m|[m 1619983 [31m [32m2020-02-23 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+[32m|[m * cac4a3d [31m [32m2020-02-16 [34mGitHub [mDelete .nfs0000000002751dee000000d0
+[32m|[m[32m/[m  
+* 3ba51fb [31m [32m2020-02-16 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 6efbf10 [31m [32m2020-02-16 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 5c2a1c1 [31m [32m2020-02-16 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* d507682 [31m [32m2020-02-08 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 98dc5c1 [31m [32m2020-02-08 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 0190b30 [31m [32m2020-02-04 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 6480a2d [31m [32m2020-02-04 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* caf86c0 [31m [32m2020-02-01 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* f35c5ea [31m [32m2020-01-31 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* dedb0b5 [31m [32m2020-01-28 [34mCraig Opie [m On branch master  Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 957d309 [31m [32m2020-01-22 [34mCraig Opie [m Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 2917df7 [31m [32m2020-01-20 [34mCraig Opie [m Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 4cd9c91 [31m [32m2020-01-20 [34mCraig Opie [m Changes to be committed:    (use "git reset HEAD <file>..." to unstage)
+* 8de43de [31m [32m2020-01-18 [34mCraig Opie [m Committer: Craig Opie <opieca@uhx02.its.hawaii.edu>
+* 1b746b7 [31m [32m2020-01-18 [34mGitHub [mInitial commit
+# On branch project2
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31mdatabase.o[m
+#	[31mdatabase.txt[m
+#	[31miofunctions.o[m
+#	[31mmain.o[m
+#	[31mproject[m
+#	[31mproof.txt[m
+#	[31muser_interface.o[m
+nothing added to commit but untracked files present (use "git add" to track)
+total 180
+drwxr-xr-x.  2 opieca uh  4096 Apr 19 00:27 .
+drwxr-xr-x. 19 opieca uh  4096 Apr 19 00:27 ..
+-rw-r--r--.  1 opieca uh  6032 Apr 19 00:25 database.o
+-rw-r--r--.  1 opieca uh     0 Apr 19 00:26 database.txt
+-rw-r--r--.  1 opieca uh  6148 Apr 19 00:27 .DS_Store
+-rwxr-xr-x.  1 opieca uh   165 Apr 18 20:47 getreport.sh
+-rw-r--r--.  1 opieca uh  6168 Apr 18 20:47 iofunctions.c
+-rw-r--r--.  1 opieca uh   709 Apr 18 20:47 iofunctions.h
+-rw-r--r--.  1 opieca uh  3856 Apr 19 00:25 iofunctions.o
+-rw-r--r--.  1 opieca uh 14267 Apr 19 00:27 llist.cpp
+-rw-r--r--.  1 opieca uh  1129 Apr 19 00:27 llist.h
+-rw-r--r--.  1 opieca uh  2476 Apr 18 20:47 main.c
+-rw-r--r--.  1 opieca uh  3320 Apr 19 00:25 main.o
+-rw-r--r--.  1 opieca uh   974 Apr 19 00:27 Makefile
+-rwxr-xr-x.  1 opieca uh 18040 Apr 19 00:25 project
+-rw-r--r--.  1 opieca uh 26783 Apr 19 00:27 project1.zip
+-rw-r--r--.  1 opieca uh 16384 Apr 19 00:27 proof.txt
+-rw-r--r--.  1 opieca uh   687 Apr 19 00:27 record.h
+-rw-r--r--.  1 opieca uh 13288 Apr 19 00:27 userinterface.cpp
+-rw-r--r--.  1 opieca uh  1580 Apr 18 20:47 user_interface.h
+-rw-r--r--.  1 opieca uh   776 Apr 19 00:27 userinterface.h
+-rw-r--r--.  1 opieca uh  9576 Apr 19 00:25 user_interface.o
+g++ -c -ansi -pedantic-errors -Wall userinterface.cpp
+g++ -c -ansi -pedantic-errors -Wall llist.cpp
+g++ -o project userinterface.o llist.o
+g++ -c -ansi -pedantic-errors -Wall -DDEBUGMODE userinterface.cpp
+g++ -c -ansi -pedantic-errors -Wall -DDEBUGMODE llist.cpp
+g++ -o project_debug userinterface.o llist.o
+]0;opieca@uhx02:~/ICS212/project1uhx02:/home/o/opieca/ICS212/project1% ./project
+This program allows a banker to create, modify, view, 
+and delete information about clients.
+     
+=================================================================================
+  Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+=================================================================================
+Please choose a menu option by typing the corresponding number
+and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Reverse the list.
+7: Quit.
+Option: 3
+Please choose a menu option by typing the corresponding number
+and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Reverse the list.
+7: Quit.
+Option: 7
+]0;opieca@uhx02:~/ICS212/project1uhx02:/home/o/opieca/ICS212/project1% ./project_debug 
+FUNCTION NAME: main
+FUNCTION NAME: llist::llist
+FUNCTION NAME: llist::readfile
+This program allows a banker to create, modify, view, 
+and delete information about clients.
+     
+=================================================================================
+  Welcome to the 'School of Hard Knocks' Student Banking and Transaction System
+=================================================================================
+FUNCTION NAME: menu
+Please choose a menu option by typing the corresponding number
+and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Reverse the list.
+7: Quit.
+Option: 1
+FUNCTION NAME: userAddRecord
+FUNCTION NAME: getAccNo
+Please enter the account number: 
+123
+FUNCTION NAME: getName
+Please enter name (press Enter twice to exit): 
+Craig Opie
+
+FUNCTION NAME: getAddress
+Please enter the address (press Enter twice to exit): 
+Home
+
+FUNCTION NAME: llist::addRecord
+accNum: 123
+name[25]: Craig Opie
+address[80]: Home
+FUNCTION NAME: menu
+Please choose a menu option by typing the corresponding number
+and pressing enter.
+1: Add a new record.
+2: Print a record.
+3: Print all records.
+4: Change a records address.
+5: Delete a record.
+6: Reverse the list.
+7: Quit.
+Option: 7
+FUNCTION NAME: llist::~llist
+FUNCTION NAME: llist::writefile
+FUNCTION NAME: llist::cleanup
+]0;opieca@uhx02:~/ICS212/project1uhx02:/home/o/opieca/ICS212/project1% exit
+exit
+
+Script done on Sun 19 Apr 2020 12:29:31 AM HST
