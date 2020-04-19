@@ -118,14 +118,14 @@ int llist::writefile()
     #endif
 
     ofstream outFile(this->filename);
-    record * temp = nullptr;
+    record * temp = NULL;
     int i;
     int success = 0;
 
     if(!outFile.fail())
     {
         temp = (this->start);
-        while(temp != nullptr)
+        while(temp != NULL)
         {
             for(i = 0; i < 25; i++)
             {
@@ -178,7 +178,7 @@ record * llist::reverse(record * recordFwd)
     bool done = false;
 
     // Returns list as is if there is nothing to reverse
-    if(recordFwd == nullptr || recordFwd->next == nullptr)
+    if(recordFwd == NULL || recordFwd->next == NULL)
     {
         temp = recordFwd;
         done = true;
@@ -189,7 +189,7 @@ record * llist::reverse(record * recordFwd)
     {
         temp = this->reverse(recordFwd->next);
         ((recordFwd->next)->next) = recordFwd;
-        recordFwd->next = nullptr;
+        recordFwd->next = NULL;
     }
     
     return temp;
@@ -201,7 +201,7 @@ record * llist::reverse(record * recordFwd)
 //  FUNCTIONNAME:   cleanup
 //
 //  DESCRIPTION:    A function used to 'free' the allocated memory and set the
-//                  pointer to nullptr.
+//                  pointer to NULL.
 //
 //  PARAMETERS:     None
 //
@@ -216,21 +216,21 @@ void llist::cleanup()
     #endif
 
     record * temp;
-    while(this->start != nullptr) 
+    while(this->start != NULL) 
     {
         temp = this->start;
         this->start = ((this->start)->next);
         delete(temp);
-        temp = nullptr;
+        temp = NULL;
     }
-    this->start = nullptr;
+    this->start = NULL;
 }
     
 /******************************************************************************
 //
 //  FUNCTIONNAME:   llist
 //
-//  DESCRIPTION:    A constructor used to set the llist to nullptr, set the
+//  DESCRIPTION:    A constructor used to set the llist to NULL, set the
 //                  filename to 'database.txt', and readin the database file.
 //
 //  PARAMETERS:     None
@@ -245,7 +245,7 @@ llist::llist()
         cout << "FUNCTION NAME: llist::llist" << endl;
     #endif
 
-    this->start = nullptr;
+    this->start = NULL;
     strcpy(this->filename, "database.txt");
     this->readfile();
     
@@ -255,7 +255,7 @@ llist::llist()
 //
 //  FUNCTIONNAME:   llist
 //
-//  DESCRIPTION:    A constructor used to set the llist to nullptr, set the
+//  DESCRIPTION:    A constructor used to set the llist to NULL, set the
 //                  filename to inFile[], and readin the database file.
 //
 //  PARAMETERS:     inFile : User specified filename for the database file.
@@ -288,7 +288,7 @@ llist::llist(char inFile[])
         cout << this->filename << endl;
     }
     
-    this->start = nullptr;
+    this->start = NULL;
     this->readfile();
 }
 
@@ -363,11 +363,11 @@ int llist::addRecord(int accNum, char name[25],char address[80])
         cout << "address[80]: " << address << endl;
     #endif
 
-    record * temp = nullptr;
+    record * temp = NULL;
     int success = 2;
 
     temp = this->start;
-    if(temp == nullptr)
+    if(temp == NULL)
     {
         this->start = new record;
         (this->start)->accountno = accNum;
@@ -377,7 +377,7 @@ int llist::addRecord(int accNum, char name[25],char address[80])
     }
     else
     {
-        while(temp->next != nullptr)
+        while(temp->next != NULL)
         {
             temp = temp->next;
         }
@@ -411,11 +411,11 @@ int llist::printRecord(int accNum)
         cout << "accNum: " << accNum << endl;
     #endif
 
-    record * temp = nullptr;
+    record * temp = NULL;
     int success = 3;
 
     temp = this->start;
-    while (temp != nullptr)
+    while (temp != NULL)
     {
         if(temp->accountno == accNum)
         {
@@ -449,10 +449,10 @@ ostream & operator << (ostream &myCout, const llist &obj)
         cout << "FUNCTION NAME: llist::operator <<" << endl;
     #endif
 
-    record * temp = nullptr;
+    record * temp = NULL;
 
     temp = obj.start;
-    while(temp != nullptr)
+    while(temp != NULL)
     {
         myCout << temp->accountno << endl;
         myCout << temp->name << endl;
@@ -484,11 +484,11 @@ int llist::modifyRecord(int accNum, char address[80])
         cout << "address[80]: " << address << endl;
     #endif
 
-    record * temp = nullptr;
+    record * temp = NULL;
     int success = 4;
 
     temp = this->start;
-    while(temp != nullptr)
+    while(temp != NULL)
     {
         if(temp->accountno == accNum)
         {
@@ -520,12 +520,12 @@ int llist::deleteRecord(int accNum)
         cout << "accNum: " << accNum << endl;
     #endif
 
-    record * temp = nullptr;
-    record * previous = nullptr;
+    record * temp = NULL;
+    record * previous = NULL;
     int success = 5;
 
     temp = this->start;
-    while(temp != nullptr)
+    while(temp != NULL)
     {
         if(temp->accountno == accNum)
         {
@@ -535,7 +535,7 @@ int llist::deleteRecord(int accNum)
                 start = (this->start)->next;
                 temp = this->start;
                 delete(previous);
-                previous = nullptr;
+                previous = NULL;
                 success = 0;
             }
             else
