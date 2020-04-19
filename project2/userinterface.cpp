@@ -334,7 +334,7 @@ int getAccNo()
     cout << "Please enter the account number: " << endl;
     while ((!(cin >> userInt)) || (userInt <= 0))
     {
-        cout << "ERROR: You must enter a valid integer.";
+        cout << "ERROR: You must enter a valid integer." << endl;
         cin.clear();
         cin.ignore(999, '\n');
         cout << "Please enter the account number: ";
@@ -366,7 +366,8 @@ void getName(char * text)
         cout << "FUNCTION NAME: getName" << endl;
     #endif
     int i;
-    char currentChar;
+    char currentChar = '\0';
+    char clearBuff = '\0';
     int MAXSIZE = 25;
 
     cout << "Please enter name (press Enter twice to exit): " << endl;
@@ -374,20 +375,30 @@ void getName(char * text)
     {
         currentChar = fgetc(stdin);
 
-        if (((int)currentChar == 32) || (currentChar == '\n') ||
+        if(((int)currentChar == 32) || (currentChar == '\n') ||
         (((int)currentChar > 64) && ((int)currentChar < 91)) ||
         (((int)currentChar > 96) && ((int)currentChar < 123)))
         {
             text[i] = currentChar;
         }
 
-        if (text[i] == '\n' && text[i-1] == '\n')
+        if(text[i] == '\n' && text[i-1] == '\n')
         {
             text[i-1] = '\0';
             for (; i < MAXSIZE; i++)
             {
                 text[i] = '\0';
             }
+        }
+    }
+
+    if(text[MAXSIZE - 1] != '\0')
+    {
+        cout << "Your entry has been truncated to 24 characters." << endl;
+        text[MAXSIZE - 1] = '\0';
+        while(clearBuff != '\n')
+        {
+            clearBuff = fgetc(stdin);
         }
     }
     cin.clear();
@@ -418,6 +429,7 @@ void getAddress(char * text)
     #endif
     int i;
     int MAXSIZE = 80;
+    char clearBuff = '\0';
 
     cout << "Please enter the address (press Enter twice to exit): " << endl;
     for (i = 0; i < MAXSIZE; i++)
@@ -430,6 +442,16 @@ void getAddress(char * text)
             {
                 text[i] = '\0';
             }
+        }
+    }
+
+    if(text[MAXSIZE - 1] != '\0')
+    {
+        cout << "Your entry has been truncated to 24 characters." << endl;
+        text[MAXSIZE - 1] = '\0';
+        while(clearBuff != '\n')
+        {
+            clearBuff = fgetc(stdin);
         }
     }
     cin.clear();

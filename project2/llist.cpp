@@ -402,7 +402,7 @@ int llist::addRecord(int accNum, char name[25],char address[80])
         temp->accountno = accNum;
         strcpy(temp->name, name);
         strcpy(temp->address, address);
-        (this->start)->next = NULL;
+        temp->next = NULL;
         success = 0;
     }
 
