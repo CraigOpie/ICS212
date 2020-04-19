@@ -413,9 +413,10 @@ int llist::printRecord(int accNum)
 
     record * temp = NULL;
     int success = 3;
+    bool loop = true;
 
     temp = this->start;
-    while (temp != NULL)
+    while(loop)
     {
         if(temp->accountno == accNum)
         {
@@ -424,7 +425,15 @@ int llist::printRecord(int accNum)
             cout << temp->address << endl;
             success = 0;
         }
-        temp = temp->next;
+        if(temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+        else
+        {
+            loop = false;
+        }
+        
     }
 
     return success;
@@ -450,15 +459,23 @@ ostream & operator << (ostream &myCout, const llist &obj)
     #endif
 
     record * temp = NULL;
+    bool loop = true;
 
     temp = obj.start;
-    while(temp != NULL)
+    while(loop)
     {
         myCout << temp->accountno << endl;
         myCout << temp->name << endl;
         myCout << temp->address << endl;
         myCout << endl;
-        temp = temp->next;
+        if(temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+        else
+        {
+            loop = false;
+        }
     }
     return myCout;
 }
