@@ -364,7 +364,6 @@ void getName(char * text)
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: getName" << endl;
-        cout << "text: " << text << endl;
     #endif
     int i;
     char currentChar;
@@ -416,7 +415,6 @@ void getAddress(char * text)
 {
     #ifdef DEBUGMODE
         cout << "FUNCTION NAME: getAddress" << endl;
-        cout << "text: " << text << endl;
     #endif
     int i;
     int MAXSIZE = 80;
