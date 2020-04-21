@@ -324,6 +324,10 @@ llist & llist::operator = (const llist &obj)
         cout << "Copy Constructor" << endl;
     #endif
 
+    if(this->start != NULL)
+    {
+        this->cleanup();
+    }
     this->start = obj.start;
     strcpy(this->filename, obj.filename);
 
