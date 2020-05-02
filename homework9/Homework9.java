@@ -78,7 +78,7 @@ public class Homework9
             {
                 System.out.format("%8s%12s%n", "inch", "cm");
             }
-            System.out.format("%8d%12d%n", inch, new Homework9().convert(userInput));
+            System.out.format("%8.2f%12.2f%n", inch, new Homework9().convert(inch));
         }
     }
 }

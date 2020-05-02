@@ -20,8 +20,8 @@
 ******************************************************************************/
 
 #include <stdio.h>
-#include "jni.h"
-#include "jni_md.h"
+#include <jni.h>
+#include <jni_md.h>
 
 
 JNIEXPORT jdouble JNICALL 
