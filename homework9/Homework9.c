@@ -28,5 +28,5 @@ JNIEXPORT jdouble JNICALL
 
 Java_Homework9_convert(JNIEnv * env, jobject obj, jdouble inch)
 {
-    return = (inch * 2.54);
+    return (inch * 2.54);
 }
