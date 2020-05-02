@@ -16,6 +16,7 @@
 //                  generate a list of inches vs centimeters, starting from 0
 //                  inches to the user provided numer, with an interval of 0.50
 //                  inches.
+// https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
 //
 ******************************************************************************/
 
@@ -28,5 +29,5 @@ JNIEXPORT jdouble JNICALL
 
 Java_Homework9_convert(JNIEnv * env, jobject obj, jdouble inch)
 {
-    return = (inch * 2.54);
+    return (inch * 2.54);
 }
