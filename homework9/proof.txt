@@ -1,0 +1,10 @@
+Script started on Fri 01 May 2020 11:06:51 PM HST
+]0;opieca@uhx02:~/ICS212/homework9[?1034huhx02:/home/o/opieca/ICS212/homework9% make
+javac Homework9.java
+javah -classpath . Homework9
+gcc -ansi -pedantic-errors -Wall -fPIC -I"/usr/java/jdk1.8.0_131/include" -I"/usr/java/jdk1.8.0_131/include/linux" -c Homework9.c
+gcc -shared -o libHomework9.so Homework9.o
+]0;opieca@uhx02:~/ICS212/homework9uhx02:/home/o/opieca/ICS212/homework9% exit
+exit
+
+Script done on Fri 01 May 2020 11:07:00 PM HST
