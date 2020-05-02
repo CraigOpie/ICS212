@@ -16,13 +16,12 @@
 //                  generate a list of inches vs centimeters, starting from 0
 //                  inches to the user provided numer, with an interval of 0.50
 //                  inches.
-// https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
 //
 ******************************************************************************/
 
 #include <stdio.h>
-#include "jni.h"
-#include "jni_md.h"
+#include <jni.h>
+#include <jni_md.h>
 
 
 JNIEXPORT jdouble JNICALL 
