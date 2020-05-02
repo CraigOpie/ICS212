@@ -9,7 +9,7 @@
  * @concept This class demonstrates in depth understanding of JNI.
  *
  */
-import java.util.Scanner;   // Required for user input
+import java.util.Scanner;
 
 /**
  * <h2>Homework9</h2>
@@ -27,7 +27,15 @@ public class Homework9
      */
     static
     {
-        System.loadLibrary("Homework9");
+        try
+        {
+            System.load("/home/o/opieca/ICS212/homework9/libHomework9.so");
+        }
+        catch (UnsatisfiedLinkError e)
+        {
+            System.err.println("Native code library failed to load.\n" + e);
+            System.exit(1);
+        }
     }
     
     private native double convert(double inches);
