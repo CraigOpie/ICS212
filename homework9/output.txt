@@ -1,0 +1,45 @@
+Script started on Fri 01 May 2020 11:07:12 PM HST
+]0;opieca@uhx02:~/ICS212/homework9[?1034huhx02:/home/o/opieca/ICS212/homework9% java Homework9.[K
+** This program demonstrates in depth understanding of JNI **
+
+This program uses a for-loop to generate a list of inches vs
+centimeters, starting from 0 inches to the user provided number,
+with an interval of 0.50 inches (input must be > 0).
+Please enter the maximum inches to show: 5
+    inch          cm
+    0.00        0.00
+    0.50        1.27
+    1.00        2.54
+    1.50        3.81
+    2.00        5.08
+    2.50        6.35
+    3.00        7.62
+    3.50        8.89
+    4.00       10.16
+    4.50       11.43
+    5.00       12.70
+]0;opieca@uhx02:~/ICS212/homework9uhx02:/home/o/opieca/ICS212/homework9% java Homework9
+** This program demonstrates in depth understanding of JNI **
+
+This program uses a for-loop to generate a list of inches vs
+centimeters, starting from 0 inches to the user provided number,
+with an interval of 0.50 inches (input must be > 0).
+Please enter the maximum inches to show: 0
+Error: Input must be a positive integer.  Please try again.
+Please enter the maximum inches to show: -1
+Error: Input must be a positive integer.  Please try again.
+Please enter the maximum inches to show: a
+Error: Input must be a positive integer.  Please try again.
+Please enter the maximum inches to show: 3
+    inch          cm
+    0.00        0.00
+    0.50        1.27
+    1.00        2.54
+    1.50        3.81
+    2.00        5.08
+    2.50        6.35
+    3.00        7.62
+]0;opieca@uhx02:~/ICS212/homework9uhx02:/home/o/opieca/ICS212/homework9% exit
+exit
+
+Script done on Fri 01 May 2020 11:07:57 PM HST
