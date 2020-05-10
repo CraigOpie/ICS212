@@ -1,0 +1,12 @@
+Script started on Sat 09 May 2020 10:01:15 PM HST
+]0;opieca@uhx02:~/ICS212/homework10[?1034huhx02:/home/o/opieca/ICS212/homework10% make
+g++ -ansi -pedantic-errors -Wall -c homework10.cpp
+g++ -ansi -pedantic-errors -Wall -c Giratina.cpp
+g++ -ansi -pedantic-errors -Wall -c Mewtwo.cpp
+g++ -ansi -pedantic-errors -Wall -c Arceus.cpp
+g++ -ansi -pedantic-errors -Wall -c Pokemon.cpp
+g++ -o homework10 homework10.o Giratina.o Mewtwo.o Arceus.o Pokemon.o
+]0;opieca@uhx02:~/ICS212/homework10uhx02:/home/o/opieca/ICS212/homework10% exit
+exit
+
+Script done on Sat 09 May 2020 10:01:22 PM HST

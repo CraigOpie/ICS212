@@ -1,0 +1,82 @@
+Script started on Sat 09 May 2020 10:01:39 PM HST
+]0;opieca@uhx02:~/ICS212/homework10[?1034huhx02:/home/o/opieca/ICS212/homework10% ./homework10 
+Creating three different Pokemon:
+Pokemon Constructor
+Arceus Constructor
+
+Pokemon Constructor
+Mewtwo Constructor
+
+Pokemon Constructor
+Giratina Constructor
+
+Displaying the Pokedex for Pokemon stored in my Vector:
+      Name:     Arceus
+      Type:     Normal
+    Height:       3.20
+Hit Points:        120
+     Level:          1
+     Speed:        120
+    Attack:        120
+   Defense:        120
+
+      Name:     Mewtwo
+      Type:    Psychic
+    Height:       2.00
+Hit Points:        106
+     Level:          1
+     Speed:        130
+    Attack:        110
+   Defense:         90
+
+      Name:   Giratina
+      Type:      Ghost
+    Height:       6.90
+Hit Points:        150
+     Level:          1
+     Speed:         90
+    Attack:        120
+   Defense:        100
+
+Displaying the Pokedex for Pokemon stored in my Map:
+      Name:     Arceus
+      Type:     Normal
+    Height:       3.20
+Hit Points:        120
+     Level:          1
+     Speed:        120
+    Attack:        120
+   Defense:        120
+
+      Name:   Giratina
+      Type:      Ghost
+    Height:       6.90
+Hit Points:        150
+     Level:          1
+     Speed:         90
+    Attack:        120
+   Defense:        100
+
+      Name:     Mewtwo
+      Type:    Psychic
+    Height:       2.00
+Hit Points:        106
+     Level:          1
+     Speed:        130
+    Attack:        110
+   Defense:         90
+
+Deleting the Pokemon before exiting the application:
+Giratina Destructor
+Pokemon Destructor
+
+Mewtwo Destructor
+Pokemon Destructor
+
+Arceus Destructor
+Pokemon Destructor
+
+]0;opieca@uhx02:~/ICS212/homework10uhx02:/home/o/opieca/ICS212/homework10% exit
+exit
+
+Script done on Sat 09 May 2020 10:01:48 PM HST
